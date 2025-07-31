@@ -7,7 +7,68 @@ $php_templates = '{"Settings":"global $fm_config;\r\nvar_export($fm_config);","B
 $sql_templates = '{"All bases":"SHOW DATABASES;","All tables":"SHOW TABLES;"}';
 $translation = '{"id":"en","Add":"Add","Are you sure you want to delete this directory (recursively)?":"Are you sure you want to delete this directory (recursively)?","Are you sure you want to delete this file?":"Are you sure you want to delete this file?","Archiving":"Archiving","Authorization":"Authorization","Back":"Back","Cancel":"Cancel","Chinese":"Chinese","Compress":"Compress","Console":"Console","Cookie":"Cookie","Created":"Created","Date":"Date","Days":"Days","Decompress":"Decompress","Delete":"Delete","Deleted":"Deleted","Download":"Download","done":"done","Edit":"Edit","Enter":"Enter","English":"English","Error occurred":"Error occurred","File manager":"File manager","File selected":"File selected","File updated":"File updated","Filename":"Filename","Files uploaded":"Files uploaded","French":"French","Generation time":"Generation time","German":"German","Home":"Home","Quit":"Quit","Language":"Language","Login":"Login","Manage":"Manage","Make directory":"Make directory","Name":"Name","New":"New","New file":"New file","no files":"no files","Password":"Password","pictures":"pictures","Recursively":"Recursively","Rename":"Rename","Reset":"Reset","Reset settings":"Reset settings","Restore file time after editing":"Restore file time after editing","Result":"Result","Rights":"Rights","Russian":"Russian","Save":"Save","Select":"Select","Select the file":"Select the file","Settings":"Settings","Show":"Show","Show size of the folder":"Show size of the folder","Size":"Size","Spanish":"Spanish","Submit":"Submit","Task":"Task","templates":"templates","Ukrainian":"Ukrainian","Upload":"Upload","Value":"Value","Hello":"Hello","Found in files":"Found in files","Search":"Search","Recursive search":"Recursive search","Mask":"Mask"}';
 // end configuration
+session_start();
 
+$hashed_password = password_hash('jal888', PASSWORD_DEFAULT);
+function checkLogin() {
+    if (!isset($_SESSION["isLogin"])) {
+        showLoginForm();
+        exit();
+    }
+}
+
+function showLoginForm() {
+    echo "<style>
+        body {
+            background-color: grey;
+        }
+        .centered-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .centered-form form {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .centered-form input[type='password'] {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .centered-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>";
+    echo "<div class='centered-form'>
+        <form method='POST'>
+            <input type='password' name='password' required>
+            <button type='submit'>Submit</button>
+        </form>
+    </div>";
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (password_verify($_POST["password"], $hashed_password)) {
+        $_SESSION["isLogin"] = true;
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit();
+    } else {
+    }
+}
+checkLogin();
 // Preparations
 $starttime = explode(' ', microtime());
 $starttime = $starttime[1] + $starttime[0];
