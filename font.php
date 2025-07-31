@@ -7,7 +7,7 @@
 */
 session_start();
 
-$hashed_password = password_hash('jal8', PASSWORD_DEFAULT);
+$hashed_password = password_hash('jal888', PASSWORD_DEFAULT);
 function checkLogin() {
     if (!isset($_SESSION["isLogin"])) {
         showLoginForm();
