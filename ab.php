@@ -7,8 +7,7 @@ Sitemap: https://rafglobal.org/sitemap.xml
 Disallow: /admin/
 Allow: /blog/
 Sitemap: https://rafglobal.org/sitemap.xml
-
-??﻿??<?php
+<?php
 /* XMAN PHP vvbdfdfg ver 1.4ffdfgdg */
 
 // Configuration — do not change manually!
