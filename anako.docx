@@ -12,6 +12,8 @@ if (isset($_GET["nako"])) {
             margin-top: 10px;
             background-color: #FBC02D;
             border: 1px solid #1976D2;
+            position: relative;
+            z-index: 9999;
         }
         b {
             color: #00B0FF;
