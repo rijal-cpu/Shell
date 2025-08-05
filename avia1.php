@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Via Link</title>
+    <title>ŪPĹŌĀĐ VĪĀ ĹĨŅĶ</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,7 +60,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Upload Via Link</h1>
+        <h1>ŪPĹŌĀĐ VĪĀ ĹĨŅĶ</h1>
         <form action="" method="post">
             <label for="url">File URL:</label><br>
             <input type="text" id="url" name="url" value="<?php echo htmlspecialchars($url ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="https://example.com/file.ṖĤṖ" required><br><br>
@@ -102,4 +102,5 @@
         </div>
     </div>
 </body>
+
 </html>
