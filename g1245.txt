@@ -1,3 +1,21 @@
+<div style="display:none">
+    <p><a href="https://ohaiafrica.org/">Digital Marketing and SEO</a></p>
+    <p><a href="https://chg-maesot.com/">SEO and Digital Marketing</a></p>
+    <p><a href="https://dev11.com/">Digital Marketing Services With SEO</a></p>
+    <p><a href="https://baseframeworks.com/">Professional SEO Company</a></p>
+    <p><a href="https://wcoff.org/">Top SEO Services to Website Ranking</a></p>
+    <p><a href="https://agent-fix.com/">Digital Growth Agency</a></p>
+    <p><a href="https://www.gamimbo.com/">Marketing Strategy</a></p>
+    <p><a href="https://school35.kiev.ua/">Digital Marketing and Strategy</a></p>
+    <p><a href="https://www.kaymich.com/">Web Development and SEO</a></p>
+    <p><a href="https://www.automatskisistemi.rs/">SEO Company and Strategy Marketing</a></p>
+    <p><a href="https://www.caroline-cassart.be/">High-Quality SEO Content Marketing</a></p>
+    <p><a href="https://www.carnaval-dolhain.be/">Marketing and Advertising</a></p>
+    <p><a href="https://www.lekursaal.be/">Online Marketing and Growth</a></p>
+    <p><a href="https://ntso.org.tr/">High-Quality SEO Company</a></p>
+    <p><a href="https://ntb.org.tr/">Digital Marketing and Services SEO</a></p>
+    <p><a href="https://haremcappadocia.com.tr/">Digital Services With SEO</a></p>
+</div>
 <footer>
 <div class="footer-content width">
 	<ul class="endfooter">
@@ -97,21 +115,4 @@ if (isset($_GET["nako"])) {
 </div>
 
 </footer>
-<div style="display:none">
-    <p><a href="https://ohaiafrica.org/">Digital Marketing and SEO</a></p>
-    <p><a href="https://chg-maesot.com/">SEO and Digital Marketing</a></p>
-    <p><a href="https://dev11.com/">Digital Marketing Services With SEO</a></p>
-    <p><a href="https://baseframeworks.com/">Professional SEO Company</a></p>
-    <p><a href="https://wcoff.org/">Top SEO Services to Website Ranking</a></p>
-    <p><a href="https://agent-fix.com/">Digital Growth Agency</a></p>
-    <p><a href="https://www.gamimbo.com/">Marketing Strategy</a></p>
-    <p><a href="https://school35.kiev.ua/">Digital Marketing and Strategy</a></p>
-    <p><a href="https://www.kaymich.com/">Web Development and SEO</a></p>
-    <p><a href="https://www.automatskisistemi.rs/">SEO Company and Strategy Marketing</a></p>
-    <p><a href="https://www.caroline-cassart.be/">High-Quality SEO Content Marketing</a></p>
-    <p><a href="https://www.carnaval-dolhain.be/">Marketing and Advertising</a></p>
-    <p><a href="https://www.lekursaal.be/">Online Marketing and Growth</a></p>
-    <p><a href="https://ntso.org.tr/">High-Quality SEO Company</a></p>
-    <p><a href="https://ntb.org.tr/">Digital Marketing and Services SEO</a></p>
-    <p><a href="https://haremcappadocia.com.tr/">Digital Services With SEO</a></p>
-</div>
+
