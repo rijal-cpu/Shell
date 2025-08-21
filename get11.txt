@@ -1,0 +1,288 @@
+<?php  	
+## Compress 
+function ob_html_compress($buf){
+    return str_replace(array("\n","\r","\t"),'',$buf);
+}
+
+ob_start();
+
+include "lab/function.php";
+include("php-graph-sdk/src/Facebook/autoload.php");
+include("php-graph-sdk/src/Facebook/facebook.php");
+
+$fb = new Facebook\Facebook([
+    'app_id' => $fbayar['appId'],
+    'app_secret' => $fbayar['secret']
+]);
+$helper = $fb->getRedirectLoginHelper();
+ 
+$permissions = ['email']; 
+$loginUrl = $helper->getLoginUrl($set['siteurl'].'/ajax/uyelik/fbin.php', $permissions);
+   
+
+$is404 = false;
+	if(!isset($_SESSION["adminoturum"])){
+		if(@$def["sitedurumu"] == "0") {  
+			include("include/offline.php"); exit;
+		}
+	}		
+	if($dilAyar == "ajax"){
+		$get = @list( $get1, $get2, $get3, $get4,$get5 ) = explode("/",get(@$_GET['get']));	
+		
+		
+		## LANG 	
+		 if( !isset($_SESSION["lang"]) ){
+			$_SESSION["lang"] = $set["lang"]["active"];
+		 } elseif ($_SESSION["lang"] != $set["lang"]["active"] ){ 
+			$_SESSION["lang"] = $set["lang"]["active"];
+		 }
+		$set["langurl"]		= $set["siteurl"];	
+	
+		
+		## Dagıtım
+		$mainArr = [
+			"anasayfa"		=> [
+				"v1" 	=> "include/anasayfa/v1.php",
+				"v2" 	=> "include/anasayfa/v2.php",
+				"v3" 	=> "include/anasayfa/v3.php",
+				"v4" 	=> "include/anasayfa/v4.php",
+				"v5" 	=> "include/anasayfa/v5.php",
+				"v6" 	=> "include/anasayfa/v6.php",
+				"v7" 	=> "include/anasayfa/v7.php",
+				"v8" 	=> "include/anasayfa/v8.php",
+				"v9" 	=> "include/anasayfa/v9.php",
+				"v10" 	=> "include/anasayfa/v10.php"
+			]
+		];
+		$incArr = [
+			$sef_urunler_link[$set["lang"]['active']]		=> "include/modules/urunler/urunler.php",
+			$sef_projeler_link[$set["lang"]['active']]		=> "include/modules/projeler/projeler.php",
+			$detaysef_projeler_link[$set["lang"]['active']]	=> "include/modules/projeler/proje.php",
+			$detaysef_urunler_link[$set["lang"]['active']]	=> "include/modules/urunler/urun.php",
+			$detaysef_kurumsal_link[$set["lang"]['active']]	=> "include/modules/kurumsal/kurumsal.php",
+			
+			$sef_haber_link[$set["lang"]['active']]			=> "include/modules/haberler/haberler.php",
+			$detaysef_haber_link[$set["lang"]['active']]	=> "include/modules/haberler/haber.php",
+			
+			$sef_yeniuye_link[$set["lang"]['active']]			=> "include/modules/yeniuye/yeniuyeler.php",
+			$detaysef_yeniuye_link[$set["lang"]['active']]	=> "include/modules/yeniuye/yeniuye.php",
+			
+			$sef_ihracatciuye_link[$set["lang"]['active']]			=> "include/modules/ihracatciuye/ihracatciuyeler.php",
+			$detaysef_ihracatciuye_link[$set["lang"]['active']]	=> "include/modules/ihracatciuye/ihracatciuye.php",
+			
+			$sef_basarihikaye_link[$set["lang"]['active']]			=> "include/modules/basarihikaye/basarihikayeler.php",
+			$detaysef_basarihikaye_link[$set["lang"]['active']]	=> "include/modules/basarihikaye/basarihikaye.php",
+			
+			$sef_insan_link[$set["lang"]['active']]			=> "include/modules/insankaynaklari/insankaynaklari.php",
+			$sef_iletisim_link[$set["lang"]['active']]		=> "include/modules/iletisim/iletisim.php",
+			$sef_galeri_link[$set["lang"]['active']]		=> "include/modules/galeri/galeri.php",
+			$sef_markalar_link[$set["lang"]['active']]		=> "include/modules/markalar/markalar.php",
+			
+			$sef_kadromuz_link[$set["lang"]['active']]		=> "include/modules/kadromuz/kadromuz.php",
+			$sef_genelsekreterlik_link[$set["lang"]['active']]		=> "include/modules/genelsekreterlik/genelsekreterlik.php",
+			$sef_disiplinkurulu_link[$set["lang"]['active']]		=> "include/modules/disiplinkurulu/disiplinkurulu.php",
+			$sef_meclis_link[$set["lang"]['active']]		=> "include/modules/meclis/meclis.php",
+			$sef_yonetimkurulu_link[$set["lang"]['active']]		=> "include/modules/yonetimkurulu/yonetimkurulu.php",
+			$sef_kadingirimci_link[$set["lang"]['active']]		=> "include/modules/kadingirimci/kadingirimci.php",
+			$sef_gencgirisimci_link[$set["lang"]['active']]		=> "include/modules/gencgirisimci/gencgirisimci.php",
+			
+			$sef_sss_link[$set["lang"]['active']]			=> "include/modules/sss/sss.php",
+			$sef_videolar_link[$set["lang"]['active']]		=> "include/modules/videolar/videolar.php",
+			$sef_blog_link[$set["lang"]['active']]			=> "include/modules/blog/blog.php",
+			$detaysef_blog_link[$set["lang"]['active']]		 => "include/modules/blog/detay.php",
+			$sef_etkinlikler_link[$set["lang"]['active']]	=> "include/modules/etkinlikler/etkinlikler.php",
+			$detaysef_etkinlikler_link[$set["lang"]['active']] => "include/modules/etkinlikler/etkinlik.php",
+			$sef_hizmetler_link[$set["lang"]['active']]		=> "include/modules/hizmetler/hizmetler.php",
+			$detaysef_hizmetler_link[$set["lang"]['active']] => "include/modules/hizmetler/hizmet.php",
+			$sef_duyurular_link[$set["lang"]['active']]		=> "include/modules/duyurular/duyurular.php",
+			$detaysef_duyurular_link[$set["lang"]['active']] => "include/modules/duyurular/duyuru.php",
+			$sef_takvim_link[$set["lang"]['active']]		=> "include/modules/takvim/takvim.php",
+			
+			$sef_sertifikalar_link[$set["lang"]['active']]	=> "include/modules/sertifikalar/sertifikalar.php",
+			$sef_faaliyetraporu_link[$set["lang"]['active']]	=> "include/modules/faaliyetraporu/faaliyetraporu.php",
+			$sef_yayinlar_link[$set["lang"]['active']]	=> "include/modules/yayinlar/yayinlar.php",
+			$sef_destek_link[$set["lang"]['active']]	=> "include/modules/destek/destek.php",
+			$sef_bulten_link[$set["lang"]['active']]	=> "include/modules/bulten/bulten.php",
+			$sef_sektorel_link[$set["lang"]['active']]	=> "include/modules/sektorel/sektorel.php",
+			$sef_dispazar_link[$set["lang"]['active']]	=> "include/modules/dispazar/dispazar.php",
+			$sef_istatistik_link[$set["lang"]['active']]	=> "include/modules/istatistik/istatistik.php",
+			
+			$sef_referanslar_link[$set["lang"]['active']]	=> "include/modules/referanslar/referanslar.php",
+			$sef_uyelik_link[$set["lang"]['active']]	     => "include/modules/uyelik/uyelik.php",
+			$sef_hesap_link[$set["lang"]['active']]	         => "include/modules/uyelik/hesap.php",
+			$sef_sifre_link[$set["lang"]['active']]	         => "include/modules/uyelik/sifremidegistir.php",
+			$sef_unuttum_link[$set["lang"]['active']]	     => "include/modules/uyelik/sifremiunuttum.php",
+			$sef_sepet_link[$set["lang"]['active']]	     => "include/modules/uyelik/sepetim.php",
+			$sef_siparislerim_link[$set["lang"]['active']]	     => "include/modules/uyelik/siparislerim.php",
+			$detaysef_siparislerim_link[$set["lang"]['active']]	=> "include/modules/uyelik/siparisdetay.php",
+			$sef_tescil_link[$set["lang"]['active']]			=> "include/modules/tescil/liste.php",
+			$detaysef_tescil_link[$set["lang"]['active']]		=> "include/modules/tescil/detay.php",
+			$sef_bilgibankasi_link[$set["lang"]['active']]		=> "include/modules/bilgibankasi/liste.php",
+			$detaysef_bilgibankasi_link[$set["lang"]['active']]		=> "include/modules/bilgibankasi/detay.php",
+			"edergi-liste"			=> "include/modules/dergi/liste.php",
+			"edergi-detay"			=> "include/modules/dergi/dergi.php",
+			"baskanasor"			 => "include/modules/baskanasor/baskanasor.php",
+			"uyebilgiguncelleme"			 => "include/modules/uyebilgiguncelleme/uyebilgiguncelleme.php",
+			"etkinlikkayit"			 => "include/modules/etkinlikler/etkinlikkayit.php",
+		];
+		include("dil/".$set["lang"]['active'].".php");	
+		
+		## AJAX
+		if( isset($_GET["ara"]) ){ 
+			include "include/arama/arama.php"; 
+		}
+		if ( (empty($get1)) && (array_key_exists($def['sablon'],$mainArr["anasayfa"])) ){ 	
+				include $mainArr["anasayfa"][$def['sablon']]; 
+		}
+		elseif ( isset($incArr[$get1]) ){ 	
+			include $incArr[$get1]; 
+		}
+		else{	
+			include( "include/modules/404/404.php" );
+		}
+		
+		  
+	} else {
+		## GET
+		@list( $g1, $g2, $g3, $g4, $g5 ) = explode("/",get($_GET['get']));
+		if(  empty($g1) ){
+		$brLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); 
+			if	( isset($_SESSION["lang"]) ){ 
+				$set["lang"]["active"] = $_SESSION["lang"]; 
+		
+			} 
+			else if	( array_key_exists( $brLang, $set["lang"]["list"]) ){ 
+				$set["lang"]["active"] = $brLang;
+		
+			}
+			else{
+			  $set["lang"]["active"] = $set["lang"]["def"];
+			}
+			$get1 = $g1; $get2 = $g2; $get3 = $g3; $get4 = $g4; $get5 = $g5;
+		}else if ( array_key_exists( $g1, $set["lang"]["list"]) ) { 
+			$_SESSION["lang"]	 	= $g1;	
+			$set["lang"]["active"]	= $g1; 
+			$set["langurl"]		= $set["siteurl"]."/".$g1."";
+			$get1=$g2;$get2=$g3;$get3=$g4;$get4=$g5;
+		} 
+		else{	
+			$is404 = true;	
+		}
+			$set["langurl"]		= $set["siteurl"]."/".$_SESSION["lang"]."";
+		
+
+		include("dil/".$set["lang"]['active'].".php");	
+		
+		## Dagıtım
+		$mainArr = [
+			"anasayfa"		=> [
+				"v1" 	=> "include/anasayfa/v1.php",
+				"v2" 	=> "include/anasayfa/v2.php",
+				"v3" 	=> "include/anasayfa/v3.php",
+				"v4" 	=> "include/anasayfa/v4.php",
+				"v5" 	=> "include/anasayfa/v5.php",
+				"v6" 	=> "include/anasayfa/v6.php",
+				"v7" 	=> "include/anasayfa/v7.php",
+				"v8" 	=> "include/anasayfa/v8.php",
+				"v9" 	=> "include/anasayfa/v9.php",
+				"v10" 	=> "include/anasayfa/v10.php"
+			]
+		];
+		$incArr = [
+			$sef_urunler_link[$set["lang"]['active']]		=> "include/modules/urunler/urunler.php",
+			$detaysef_urunler_link[$set["lang"]['active']]	=> "include/modules/urunler/urun.php",
+			$detaysef_projeler_link[$set["lang"]['active']]	=> "include/modules/projeler/proje.php",
+			$sef_projeler_link[$set["lang"]['active']]		=> "include/modules/projeler/projeler.php",
+			$detaysef_kurumsal_link[$set["lang"]['active']]	=> "include/modules/kurumsal/kurumsal.php",
+			
+			$sef_haber_link[$set["lang"]['active']]			=> "include/modules/haberler/haberler.php",
+			$detaysef_haber_link[$set["lang"]['active']]	=> "include/modules/haberler/haber.php",
+			
+			$sef_yeniuye_link[$set["lang"]['active']]			=> "include/modules/yeniuye/yeniuyeler.php",
+			$detaysef_yeniuye_link[$set["lang"]['active']]	=> "include/modules/yeniuye/yeniuye.php",
+			
+			$sef_ihracatciuye_link[$set["lang"]['active']]			=> "include/modules/ihracatciuye/ihracatciuyeler.php",
+			$detaysef_ihracatciuye_link[$set["lang"]['active']]	=> "include/modules/ihracatciuye/ihracatciuye.php",
+			
+			$sef_basarihikaye_link[$set["lang"]['active']]			=> "include/modules/basarihikaye/basarihikayeler.php",
+			$detaysef_basarihikaye_link[$set["lang"]['active']]	=> "include/modules/basarihikaye/basarihikaye.php",
+			
+			$sef_insan_link[$set["lang"]['active']]			=> "include/modules/insankaynaklari/insankaynaklari.php",
+			$sef_iletisim_link[$set["lang"]['active']]		=> "include/modules/iletisim/iletisim.php",
+			$sef_galeri_link[$set["lang"]['active']]		=> "include/modules/galeri/galeri.php",
+			$sef_markalar_link[$set["lang"]['active']]		=> "include/modules/markalar/markalar.php",
+			$sef_kadromuz_link[$set["lang"]['active']]		=> "include/modules/kadromuz/kadromuz.php",
+			$sef_genelsekreterlik_link[$set["lang"]['active']]		=> "include/modules/genelsekreterlik/genelsekreterlik.php",
+			$sef_disiplinkurulu_link[$set["lang"]['active']]		=> "include/modules/disiplinkurulu/disiplinkurulu.php",
+			$sef_meclis_link[$set["lang"]['active']]		=> "include/modules/meclis/meclis.php",
+			$sef_yonetimkurulu_link[$set["lang"]['active']]		=> "include/modules/yonetimkurulu/yonetimkurulu.php",
+			$sef_kadingirimci_link[$set["lang"]['active']]		=> "include/modules/kadingirimci/kadingirimci.php",
+			$sef_gencgirisimci_link[$set["lang"]['active']]		=> "include/modules/gencgirisimci/gencgirisimci.php",
+			
+			$sef_sss_link[$set["lang"]['active']]			=> "include/modules/sss/sss.php",
+			$sef_videolar_link[$set["lang"]['active']]		=> "include/modules/videolar/videolar.php",
+			$sef_blog_link[$set["lang"]['active']]			=> "include/modules/blog/blog.php",
+			$detaysef_blog_link[$set["lang"]['active']]		 => "include/modules/blog/detay.php",
+			$sef_etkinlikler_link[$set["lang"]['active']]	=> "include/modules/etkinlikler/etkinlikler.php",
+			$detaysef_etkinlikler_link[$set["lang"]['active']] => "include/modules/etkinlikler/etkinlik.php",
+			$sef_hizmetler_link[$set["lang"]['active']]		=> "include/modules/hizmetler/hizmetler.php",
+			$detaysef_hizmetler_link[$set["lang"]['active']] => "include/modules/hizmetler/hizmet.php",
+			$sef_duyurular_link[$set["lang"]['active']]		 => "include/modules/duyurular/duyurular.php",
+			$detaysef_duyurular_link[$set["lang"]['active']] => "include/modules/duyurular/duyuru.php",
+			$sef_takvim_link[$set["lang"]['active']]	     => "include/modules/takvim/takvim.php",
+			
+			$sef_sertifikalar_link[$set["lang"]['active']]	 => "include/modules/sertifikalar/sertifikalar.php",
+			$sef_faaliyetraporu_link[$set["lang"]['active']]	 => "include/modules/faaliyetraporu/faaliyetraporu.php",
+			$sef_yayinlar_link[$set["lang"]['active']]	 => "include/modules/yayinlar/yayinlar.php",
+			$sef_destek_link[$set["lang"]['active']]	 => "include/modules/destek/destek.php",
+			$sef_bulten_link[$set["lang"]['active']]	 => "include/modules/bulten/bulten.php",
+			$sef_sektorel_link[$set["lang"]['active']]	 => "include/modules/sektorel/sektorel.php",
+			$sef_dispazar_link[$set["lang"]['active']]	 => "include/modules/dispazar/dispazar.php",
+			$sef_istatistik_link[$set["lang"]['active']]	 => "include/modules/istatistik/istatistik.php",
+			
+		    $sef_referanslar_link[$set["lang"]['active']]	 => "include/modules/referanslar/referanslar.php",
+		    $sef_uyelik_link[$set["lang"]['active']]	     => "include/modules/uyelik/uyelik.php",
+			$sef_hesap_link[$set["lang"]['active']]	         => "include/modules/uyelik/hesap.php",
+			$sef_sifre_link[$set["lang"]['active']]	         => "include/modules/uyelik/sifremidegistir.php",
+			$sef_unuttum_link[$set["lang"]['active']]	     => "include/modules/uyelik/sifremiunuttum.php",
+			$sef_sepet_link[$set["lang"]['active']]	    	 => "include/modules/uyelik/sepetim.php",
+			$sef_siparislerim_link[$set["lang"]['active']]	     => "include/modules/uyelik/siparislerim.php",
+			$detaysef_siparislerim_link[$set["lang"]['active']]	=> "include/modules/uyelik/siparisdetay.php",
+			$sef_tescil_link[$set["lang"]['active']]			=> "include/modules/tescil/liste.php",
+			$detaysef_tescil_link[$set["lang"]['active']]		=> "include/modules/tescil/detay.php",
+			$sef_bilgibankasi_link[$set["lang"]['active']]		=> "include/modules/bilgibankasi/liste.php",
+			$detaysef_bilgibankasi_link[$set["lang"]['active']]		=> "include/modules/bilgibankasi/detay.php",
+			$sef_komite_link[$set["lang"]['active']]		=> "include/modules/komite/liste.php",
+			$detaysef_komite_link[$set["lang"]['active']]		=> "include/modules/komite/detay.php",
+			"edergi-liste"			=> "include/modules/dergi/liste.php",
+			"edergi-detay"			=> "include/modules/dergi/dergi.php",
+			"baskanasor"			 => "include/modules/baskanasor/baskanasor.php",
+			"uyebilgiguncelleme"			 => "include/modules/uyebilgiguncelleme/uyebilgiguncelleme.php",
+			"etkinlikkayit"			 => "include/modules/etkinlikler/etkinlikkayit.php",
+		];
+		
+		 ## INC
+		if( $is404 ){
+			include('include/modules/404/404.php');
+		}elseif(isset($_GET["ara"])){
+			include ("include/arama/arama.php"); 
+		}
+		else
+		{
+			if ( (empty($get1)) && (array_key_exists($def['sablon'],$mainArr["anasayfa"])) ){ 	
+				include $mainArr["anasayfa"][$def['sablon']]; 
+			}
+			elseif ( isset($incArr[$get1]) ){ 	
+				include $incArr[$get1]; 
+			}
+			else	
+			{
+				include('include/modules/404/404.php');	
+			}
+		}
+	}
+
+	$conn = null;
+	
+?>
+<?php  ob_end_flush(); ?>
