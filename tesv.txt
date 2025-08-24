@@ -1,0 +1,194 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete'])) {
+    $file_to_delete = realpath($_POST['delete']);
+    if ($file_to_delete && strpos($file_to_delete, __DIR__) === 0) {
+        unlink($file_to_delete);
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_all']) && isset($_POST['search_text'])) {
+    $search_text = $_POST['search_text'];
+    $directory = __DIR__; // Direktori saat ini
+    
+    // Mencari semua file yang mengandung teks tertentu
+    $files_to_delete = [];
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+
+    foreach ($iterator as $fileinfo) {
+        if ($fileinfo->isFile()) {
+            $file_path = $fileinfo->getRealPath();
+            $file_contents = file_get_contents($file_path);
+            if (strpos($file_contents, $search_text) !== false) {
+                $files_to_delete[] = $file_path; // Tambahkan file ke array
+            }
+        }
+    }
+
+    // Menghapus file yang ditemukan
+    foreach ($files_to_delete as $file) {
+        if (unlink($file)) {
+            echo "<p>File berhasil dihapus: $file</p>";
+        } else {
+            echo "<p>Gagal menghapus file: $file</p>";
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencari Dan Hapus Isi File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #b02a37;
+        }
+        .file-text {
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .delete-all {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .delete-all:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mencari Dan Hapus Isi File</h1>
+        <form action="" method="post">
+            <input type="text" name="search_text" placeholder="Masukkan teks yang ingin dicari..." required>
+            <input type="submit" name="search" value="Cari File">
+        </form>
+
+        <?php
+        if (isset($_POST['search'])) {
+            $search_text = $_POST['search_text'];
+            $directory = __DIR__; // Direktori saat ini
+            $files_found = [];
+
+            $iterator = new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
+                RecursiveIteratorIterator::SELF_FIRST
+            );
+
+            foreach ($iterator as $fileinfo) {
+                if ($fileinfo->isFile()) {
+                    $file_path = $fileinfo->getRealPath();
+                    $file_contents = file_get_contents($file_path);
+                    if (strpos($file_contents, $search_text) !== false) {
+                        $files_found[] = $file_path;
+                    }
+                }
+            }
+
+            if ($files_found) {
+                echo '<form method="post">';
+                echo '<div class="results">';
+                echo '<table>';
+                echo '<thead>';
+                echo '<tr>';
+                echo '<th>Nama File</th>';
+                echo '<th>Opsi</th>';
+                echo '</tr>';
+                echo '</thead>';
+                echo '<tbody>';
+
+                foreach ($files_found as $file) {
+                    echo '<tr>';
+                    echo '<td class="file-text">' . htmlspecialchars($file) . '</td>';
+                    echo '<td><button type="submit" name="delete" value="' . htmlspecialchars($file) . '" class="delete-btn">Hapus File</button></td>';
+                    echo '</tr>';
+                }
+                
+                echo '</tbody>';
+                echo '</table>';
+                echo '<input type="hidden" name="search_text" value="' . htmlspecialchars($search_text) . '">';
+                echo '<input type="submit" class="delete-all" name="delete_all" value="Hapus Semua">';
+                echo '</div>';
+                echo '</form>';
+            } else {
+                echo '<p>Tidak ditemukan file yang mengandung teks: "' . htmlspecialchars($search_text) . '"</p>';
+            }
+        }
+        ?>
+    </div>
+</body>
+</html>
