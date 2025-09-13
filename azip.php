@@ -7,14 +7,6 @@ error_reporting(0);
 @ini_set('max_execution_time',0);
 @ini_set('display_errors', 0);
 @ini_set('display_startup_errors', '0');
-@ini_set('memory_limit', '-1');
-@ini_set('output_buffering', '0');
-@ini_set('implicit_flush', '1');
-ob_implicit_flush(true);
-header('Content-Type: text/html; charset=utf-8');
-header('Cache-Control: no-cache, no-store, must-revalidate');
-header('Pragma: no-cache');
-header('Expires: 0');
 
 if (!class_exists('ZipArchive')) {
     die("ZipArchive tidak tersedia. Pastikan zip diaktifkan di PHP.");
@@ -67,3 +59,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["zipfile"])) {
     </html>';
 }
 ?>
+
