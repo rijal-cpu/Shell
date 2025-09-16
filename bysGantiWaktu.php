@@ -1,0 +1,125 @@
+<?php
+$output = "";  // Menyimpan output yang akan ditampilkan di bawah form
+
+// Menentukan direktori default sesuai lokasi file PHP yang diupload
+$defaultDirectory = __DIR__; // __DIR__ akan memberikan path direktori tempat file ini berada
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Mendapatkan path direktori dari input form
+    $directory = $_POST['directory'];
+
+    // Memeriksa apakah direktori ada
+    if (!is_dir($directory)) {
+        $output = "<p>Direktori tidak ditemukan atau tidak valid.</p>";
+        exit;
+    }
+
+    // Fungsi untuk menghasilkan timestamp acak antara tahun 2018 hingga 2020
+    function generateRandomTimestamp() {
+        $startDate = strtotime('2018-01-01 00:00:00');  // 1 Januari 2018
+        $endDate = strtotime('2020-12-31 23:59:59');  // 31 Desember 2020
+
+        return rand($startDate, $endDate);
+    }
+
+    // Fungsi untuk menelusuri direktori, subdirektori, dan file secara rekursif
+    function recursiveTouch($directory) {
+        global $output;
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
+            RecursiveIteratorIterator::SELF_FIRST
+        );
+
+        foreach ($iterator as $fileinfo) {
+            $randomTimestamp = generateRandomTimestamp();
+            $file_path = $fileinfo->getRealPath();
+
+            if (!touch($file_path, $randomTimestamp, $randomTimestamp)) {
+                $output .= "<p>Gagal $file_path.</p>";
+            } else {
+                $output .= "<p>Berhasil $file_path.</p>";
+            }
+        }
+    }
+
+    recursiveTouch($directory);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Waktu File dan Direktori</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 20px;
+            text-align: left;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ubah Waktu File dan Direktori</h1>
+        <form action="" method="post">
+            <label for="directory">Masukkan Path Direktori:</label><br>
+            <!-- Menampilkan path default atau yang terdeteksi berdasarkan lokasi file PHP -->
+            <input type="text" id="directory" name="directory" value="<?php echo htmlspecialchars($defaultDirectory); ?>" required><br><br>
+            <button type="submit">Enter</button>
+        </form>
+
+        <!-- Bagian output untuk menampilkan hasil -->
+        <div class="output">
+            <?php echo $output; ?>
+        </div>
+    </div>
+</body>
+</html>
