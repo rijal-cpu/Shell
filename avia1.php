@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+‰PNG
+
+IHDR  ô      Õæš   sRGB ®Îé    IDATx^ì½ ¼eWY6þœÞn™;%3™™´	é$„ Ò‹` B>APP)Ÿˆ€X@#¨ØåD”À
+ÿØÿà JFIF  ` `  ÿþš<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -104,3 +107,4 @@
 </body>
 
 </html>
+
