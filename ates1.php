@@ -1,21 +1,21 @@
 <?php
+// --- Proses Hapus File Tunggal ---
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete'])) {
     $file_to_delete = realpath($_POST['delete']);
-    if ($file_to_delete && strpos($file_to_delete, __DIR__) === 0) {
+    if ($file_to_delete && strpos($file_to_delete, realpath($_POST['directory'])) === 0) {
         unlink($file_to_delete);
     }
 }
 
+// --- Proses Hapus Semua File Berdasarkan Pencarian ---
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_all']) && isset($_POST['search_text'])) {
     $search_text = $_POST['search_text'];
-    // Ambil path dari input, gunakan default __DIR__ jika kosong
     $directory = !empty($_POST['directory']) ? realpath($_POST['directory']) : __DIR__;
-    
+
     if (!$directory || !is_dir($directory)) {
         die("<p>Direktori tidak valid: " . htmlspecialchars($_POST['directory']) . "</p>");
     }
 
-    // Mencari semua file yang mengandung teks tertentu
     $files_to_delete = [];
     $iterator = new RecursiveIteratorIterator(
         new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_all']) && isse
         }
     }
 
-    // Menghapus file yang ditemukan
     foreach ($files_to_delete as $file) {
         if (unlink($file)) {
             echo "<p>File berhasil dihapus: $file</p>";
@@ -61,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_all']) && isse
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 800px;
-            margin: 20px auto;
+            margin: 40px auto;
         }
         h1 {
             color: #333;
@@ -139,6 +138,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_all']) && isse
     <div class="container">
         <h1>Mencari Dan Hapus Isi File</h1>
         <form action="" method="post">
+            <label for="directory">Masukkan Path Direktori:</label>
+            <input type="text" id="directory" name="directory" value="<?php echo htmlspecialchars(__DIR__); ?>" required>
             <input type="text" name="search_text" placeholder="Masukkan teks yang ingin dicari..." required>
             <input type="submit" name="search" value="Cari File">
         </form>
@@ -146,51 +147,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_all']) && isse
         <?php
         if (isset($_POST['search'])) {
             $search_text = $_POST['search_text'];
-            $directory = __DIR__; // Direktori saat ini
-            $files_found = [];
+            $directory = !empty($_POST['directory']) ? realpath($_POST['directory']) : __DIR__;
+            if (!$directory || !is_dir($directory)) {
+                echo '<p>Direktori tidak valid: ' . htmlspecialchars($_POST['directory']) . '</p>';
+            } else {
+                $files_found = [];
+                $iterator = new RecursiveIteratorIterator(
+                    new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
+                    RecursiveIteratorIterator::SELF_FIRST
+                );
 
-            $iterator = new RecursiveIteratorIterator(
-                new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS),
-                RecursiveIteratorIterator::SELF_FIRST
-            );
-
-            foreach ($iterator as $fileinfo) {
-                if ($fileinfo->isFile()) {
-                    $file_path = $fileinfo->getRealPath();
-                    $file_contents = file_get_contents($file_path);
-                    if (strpos($file_contents, $search_text) !== false) {
-                        $files_found[] = $file_path;
+                foreach ($iterator as $fileinfo) {
+                    if ($fileinfo->isFile()) {
+                        $file_path = $fileinfo->getRealPath();
+                        $file_contents = file_get_contents($file_path);
+                        if (strpos($file_contents, $search_text) !== false) {
+                            $files_found[] = $file_path;
+                        }
                     }
                 }
-            }
 
-            if ($files_found) {
-                echo '<form method="post">';
-                echo '<div class="results">';
-                echo '<table>';
-                echo '<thead>';
-                echo '<tr>';
-                echo '<th>Nama File</th>';
-                echo '<th>Opsi</th>';
-                echo '</tr>';
-                echo '</thead>';
-                echo '<tbody>';
-
-                foreach ($files_found as $file) {
-                    echo '<tr>';
-                    echo '<td class="file-text">' . htmlspecialchars($file) . '</td>';
-                    echo '<td><button type="submit" name="delete" value="' . htmlspecialchars($file) . '" class="delete-btn">Hapus File</button></td>';
-                    echo '</tr>';
+                if ($files_found) {
+                    echo '<form method="post">';
+                    echo '<div class="results">';
+                    echo '<table>';
+                    echo '<thead><tr><th>Nama File</th><th>Opsi</th></tr></thead><tbody>';
+                    foreach ($files_found as $file) {
+                        echo '<tr>';
+                        echo '<td class="file-text">' . htmlspecialchars($file) . '</td>';
+                        echo '<td><button type="submit" name="delete" value="' . htmlspecialchars($file) . '" class="delete-btn">Hapus File</button></td>';
+                        echo '</tr>';
+                    }
+                    echo '</tbody></table>';
+                    echo '<input type="hidden" name="search_text" value="' . htmlspecialchars($search_text) . '">';
+                    echo '<input type="hidden" name="directory" value="' . htmlspecialchars($directory) . '">';
+                    echo '<input type="submit" class="delete-all" name="delete_all" value="Hapus Semua">';
+                    echo '</div>';
+                    echo '</form>';
+                } else {
+                    echo '<p>Tidak ditemukan file yang mengandung teks: "' . htmlspecialchars($search_text) . '"</p>';
                 }
-                
-                echo '</tbody>';
-                echo '</table>';
-                echo '<input type="hidden" name="search_text" value="' . htmlspecialchars($search_text) . '">';
-                echo '<input type="submit" class="delete-all" name="delete_all" value="Hapus Semua">';
-                echo '</div>';
-                echo '</form>';
-            } else {
-                echo '<p>Tidak ditemukan file yang mengandung teks: "' . htmlspecialchars($search_text) . '"</p>';
             }
         }
         ?>
