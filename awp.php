@@ -1,4 +1,20 @@
 <?php
+@set_time_limit(0);
+@clearstatcache();
+error_reporting(0);
+@ini_set('error_log',null);
+@ini_set('log_errors',0);
+@ini_set('max_execution_time',0);
+@ini_set('display_errors', 0);
+@ini_set('display_startup_errors', '0');
+@ini_set('memory_limit', '-1');
+@ini_set('output_buffering', '0');
+@ini_set('implicit_flush', '1');
+ob_implicit_flush(true);
+header('Content-Type: text/html; charset=utf-8');
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
 session_start();
 
 // Define username and password
@@ -625,4 +641,5 @@ if (isset($_GET['logout'])) {
     header("Location: " . $_SERVER['PHP_SELF']);
     exit;
 }
+
 ?>
