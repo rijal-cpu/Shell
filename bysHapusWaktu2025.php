@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!is_dir($directory)) {
         $output = "<p>Direktori yang dimasukkan tidak valid atau tidak ada.</p>";
     } else {
-        $start_date = strtotime('2025-01-01'); // 1 Januari 2025
-        $end_date = strtotime('2025-12-31 23:59:59'); // 31 Desember 2025
+        $start_date = strtotime('2026-01-01'); // 1 Januari 2025
+        $end_date = strtotime('2026-12-31 23:59:59'); // 31 Desember 2025
         
         // Membuka direktori
         $iterator = new RecursiveIteratorIterator(
@@ -111,3 +111,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+
